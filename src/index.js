@@ -7,37 +7,81 @@ class AppContainer extends HTMLElement{
     constructor(){
         super();
         this.attachShadow({mode: "open"})
-
-    }
+    };
 
     connectedCallback(){
+        this.render();
+    };
+
+    attributeChangedCallback(propName, oldValue, newValue) {
+        this[propName] = newValue;
+        this.render();
+    };
+
+    render(){
+            data.forEach((lkd)=>{
+                this.shadowRoot.innerHTML += `
+                <dashboard-post userName="${lkd.username}" userPfp="${lkd.userpfp}" postText="${lkd.posttext}" postImage="${lkd.postimage}"></dashboard-post>`
+            }
+        )
+    };
+}
+
+class Sidebar extends HTMLElement {
+
+    static get observedAttributes() {
+    }
+
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+    }
+
+    connectedCallback() {
+        this.render();
+    }
+
+    attributeChangedCallback(propName, oldValue, newValue) {
+        this[propName] = newValue;
         this.render();
     }
 
     render(){
-        console.log(data);
-        data.forEach((lkd)=>{
-            this.shadowRoot.innerHTML += `
-            <link rel="stylesheet" href="./styles.css">
-            <dashboard-post userName="${lkd.username}" userPfp="${lkd.userpfp}" postText="${lkd.posttext}" postImage="${lkd.postimage}"></dashboard-post>`
-        })
-
-        console.log(data2);
         data2.forEach((sb)=>{
-        this.shadowRoot.innerHTML += `
-        <link rel="stylesheet" href="./styles.css">
-        <side-bar pageIcon="${sb.pageicon}"></side-bar>
-        `
-    })
+            this.shadowRoot.innerHTML += `
+            <sidebar-icon goToLink="${sb.goToLink}" pageIcon="${sb.pageicon}"></sidebar-icon>`
+        })
+    }
+}
 
-            data3.forEach((fw)=>{
+class FollowRecoms extends HTMLElement {
+
+    static get observedAttributes() {
+    }
+
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+    }
+
+    connectedCallback() {
+        this.render();
+    }
+
+    attributeChangedCallback(propName, oldValue, newValue) {
+        this[propName] = newValue;
+        this.render();
+    }
+
+    render(){
+        data3.forEach((fw)=>{
             this.shadowRoot.innerHTML += `
             <link rel="stylesheet" href="./styles.css">
-            <follow-recoms photo="${fw.photof}" nameu="${fw.nameu}"></follow-recoms>
-            `
-
+            <follow-recompfp userpfp="${fw.userpfp}" username="${fw.username}"></follow-recompfp>`
         })
     }
 }
 
 customElements.define("app-container",AppContainer);
+customElements.define('my-sidebar', Sidebar);
+customElements.define('follow-recoms', FollowRecoms);

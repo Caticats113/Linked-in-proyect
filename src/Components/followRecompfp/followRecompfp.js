@@ -1,7 +1,7 @@
-class FollowRecoms extends HTMLElement {
+class FollowRecompfp extends HTMLElement {
 
     static get observedAttributes() {
-        return ["photof", "nameu"];
+        return ["userpfp", "username"];
     }
 
     constructor() {
@@ -21,10 +21,10 @@ class FollowRecoms extends HTMLElement {
     render(){
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./styles.css">
-        <img src="${this.photof}"><label>${this.nameu}</label>
+        <img class="pfr" src="${this.userpfp}"><label>${this.username}</label>
         `;
     }
 }
 
-customElements.define('follow-recoms', FollowRecoms);
-export default FollowRecoms;
+customElements.define('follow-recompfp', FollowRecompfp);
+export default FollowRecompfp;
