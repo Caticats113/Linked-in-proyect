@@ -1,7 +1,7 @@
 class FollowRecoms extends HTMLElement {
 
     static get observedAttributes() {
-        return ["userPfp", "userName"];
+        return ["photof", "nameu"];
     }
 
     constructor() {
@@ -20,8 +20,8 @@ class FollowRecoms extends HTMLElement {
 
     render(){
         this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="./src/components/followRecoms/followRecoms.css">
-        <img src="${this.userPfp}"><label>${this.userName}</label>
+        <link rel="stylesheet" href="./styles.css">
+        <img src="${this.photof}"><label>${this.nameu}</label>
         `;
     }
 }

@@ -21,13 +21,13 @@ class DashboardPost extends HTMLElement {
     render(){
         console.log(this.userPfp);
         this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="./src/components/dashboardPost/dashboardPost.css">
+        <link rel="stylesheet" href="./styles.css">
         <div>
-            <img src="${this.userpfp}">
+            <img id="pf" src="${this.userpfp}">
             <label>${this.username}</label>
         </div>
         <p>${this.posttext}</p>
-        <img src="${this.postimage}">
+        <img id="pst" src="${this.postimage}">
         `;
     }
 }
