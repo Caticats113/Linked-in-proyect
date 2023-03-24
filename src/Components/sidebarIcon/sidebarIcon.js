@@ -1,7 +1,7 @@
-class SideBar extends HTMLElement {
+class SidebarIcon extends HTMLElement {
 
     static get observedAttributes() {
-        return ["pageLink", "pageIcon"];
+        return ["pageicon", "goToLink"];
     }
 
     constructor() {
@@ -20,11 +20,11 @@ class SideBar extends HTMLElement {
 
     render(){
         this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="./src/components/sideBar/sideBar.css">
-        <a href="${this.pageLink}"> <img src="${this.pageIcon}"> </a>
+        <link rel="stylesheet" href="./styles.css">
+        <a href="${this.goToLink}"> <img id="icon" src="${this.pageicon}"> </a>
         `;
     }
 }
 
-customElements.define('side-bar', SideBar);
-export default SideBar;
+customElements.define('sidebar-icon', SidebarIcon);
+export default SidebarIcon;

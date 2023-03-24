@@ -1,7 +1,6 @@
 class FollowRecoms extends HTMLElement {
 
     static get observedAttributes() {
-        return ["userPfp", "userName"];
     }
 
     constructor() {
@@ -19,12 +18,14 @@ class FollowRecoms extends HTMLElement {
     }
 
     render(){
-        this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="./src/components/followRecoms/followRecoms.css">
-        <img src="${this.userPfp}"><label>${this.userName}</label>
-        `;
+        this.shadowRoot.innerHTML =
+        data3.forEach((fw)=>{
+            this.shadowRoot.innerHTML += `
+            <link rel="stylesheet" href="./styles.css">
+            <follow-recoms userpfp="${fw.userpfp}" username="${fw.username}"></follow-recoms>`
+        })
     }
 }
 
-customElements.define('follow-recoms', FollowRecoms);
+customElements.define('main-dashboard', FollowRecoms);
 export default FollowRecoms;

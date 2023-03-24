@@ -1,0 +1,108 @@
+body{
+    background-image: url("./imagenes/fondo1.png");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+my-sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.47);
+    padding: 1%;
+}
+
+sidebar-icon a{
+    width: min-content;
+}
+sidebar-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+follow-recoms{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background-color: white;
+    border-radius: 5%;
+    height: fit-content;
+}
+
+follow-recompfp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    margin: 5% 3%;
+}
+.pfr{
+    width: 30%;
+}
+
+app-container{
+    margin-left: 12%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post{
+    padding: 5%;
+    background-color: white;
+    border-radius: 30px;
+    margin: 5%;
+}
+
+.userPost{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+}
+
+.pf{
+    width: 15%;
+    border-radius: 100%;
+}
+
+.pst{
+    width: 100%;
+    border-radius: 5%;
+}
+
+#icon{
+    width: 60%;
+}
+
+@media (max-width: 700px) {
+body{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+    follow-recoms{
+    display: none;
+}
+
+my-sidebar{
+    display: none;
+}
+
+app-container{
+    margin-left: 0;
+}
+
+}
