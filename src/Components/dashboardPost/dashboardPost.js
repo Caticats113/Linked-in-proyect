@@ -21,13 +21,14 @@ class DashboardPost extends HTMLElement {
     render(){
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./styles.css">
-        <div class="userPost">
-            <img class="pf" src="${this.userpfp}">
-            <h3>${this.username}</h3>
-        </div>
-        <p>${this.posttext}</p>
-        <img class="pst" src="${this.postimage}">
-        `;
+        <div class="post">
+            <div class="userPost">
+                <img class="pf" src="${this.userpfp}">
+                <h3>${this.username}</h3>
+            </div>
+            <p>${this.posttext}</p>
+            <img class="pst" src="${this.postimage}">
+        </div>`;
     }
 }
 
