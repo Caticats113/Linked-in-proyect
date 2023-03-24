@@ -15,6 +15,12 @@ class AppContainer extends HTMLElement{
     }
 
     render(){
+
+        this.shadowRoot.innerHTML += `
+        <link rel="stylesheet" href="./styles.css">
+        <create-post></create-post>
+        `
+
         console.log(data);
         data.forEach((lkd)=>{
             this.shadowRoot.innerHTML += `
@@ -29,7 +35,7 @@ class AppContainer extends HTMLElement{
         <side-bar pageIcon="${sb.pageicon}"></side-bar>
         `
     })
-
+            console.log(data3);
             data3.forEach((fw)=>{
             this.shadowRoot.innerHTML += `
             <link rel="stylesheet" href="./styles.css">
