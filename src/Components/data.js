@@ -21,7 +21,7 @@ const data =[
     },
     {
         username:"SUSE",
-        userpfp:"http://store-images.s-microsoft.com/image/apps.64136.14398957107022948.d4403138-2b3f-4ae2-b0c3-1427987cdd8b.445472fb-aca1-4015-b898-ad94473af146",
+        userpfp:"https://www.ecured.cu/images/f/f0/Suse.png",
         posttext:"To help you make a truly informed decision, our Enterprise Linux Playbook compares the capabilities across all the leading releases.",
         postimage:"https://media.licdn.com/dms/image/sync/D5618AQF4MMFzSxhNKg/companyUpdate-article-image-shrink_627_1200/0/1674618356938/SUSE-Modernize-Retail-Experience1200x1200-Ad-51png?e=1682553600&v=beta&t=kAcyh1-st2qCHWhFAoMiDHNSnrOAzvErdVqaF54j2ME",
     },

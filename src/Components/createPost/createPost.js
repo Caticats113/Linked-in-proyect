@@ -17,14 +17,19 @@ class CreatePost extends HTMLElement{
     render(){
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./styles.css">
-        <div class="card">
-        <img src="perfil.png">
-        <input type="" placeholder="create ....">
-        <img src="imagen.png">
-        <img src="youtube.png">
-        <img src="calendario.png">
-        <img src="menu.png">
+        <div class="creted">
+        <section class="create">
+        <img id="perfil" src="./imagenes/perfil.png">
+        <input id="navv" placeholder="create ....">
+        </section>
+        <section class="iconos">
+        <img src="./imagenes/imagen.png">
+        <img src="./imagenes/youtube.png">
+        <img src="./imagenes/calendario.png">
+        <img src="./imagenes/menu.png">
+        </section>
         </div>
+
         `;
     }
 }

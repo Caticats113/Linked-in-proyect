@@ -1,19 +1,24 @@
 const data2 = [
- {
-    pageicon:"./imagenes/hogar.png"
- },
- {
-    pageicon:"./imagenes/globo.png"
- },
- {
-    pageicon:"./imagenes/maletin.png"
- },
- {
-    pageicon:"./imagenes/campana.png"
- },
- {
-    pageicon:"./imagenes/usuario.png"
- }
+   {
+      pageicon:"../../dist/imagenes/hogar.png",
+      goToLink:""
+   },
+   {
+      pageicon:"../../dist/imagenes/globo.png",
+      goToLink:""
+   },
+   {
+      pageicon:"../../dist/imagenes/maletin.png",
+      goToLink:""
+   },
+   {
+      pageicon:"../../dist/imagenes/campana.png",
+      goToLink:""
+   },
+   {
+      pageicon:"../../dist/imagenes/usuario.png",
+      goToLink:""
+   }
 ];
 
 export default data2;

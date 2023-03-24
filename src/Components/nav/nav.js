@@ -1,8 +1,4 @@
-class FollowRecoms extends HTMLElement {
-
-    static get observedAttributes() {
-        return ["photof", "nameu"];
-    }
+class Nav extends HTMLElement{
 
     constructor() {
         super();
@@ -21,10 +17,13 @@ class FollowRecoms extends HTMLElement {
     render(){
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./styles.css">
-        <img src="${this.photof}"><label>${this.nameu}</label>
-        `;
+        <section class="buscador">
+        <img id="in" src="./imagenes/in.png">
+        <input id="navv" placeholder="search ....">
+        </section>`;
+
     }
 }
 
-customElements.define('follow-recoms', FollowRecoms);
-export default FollowRecoms;
+customElements.define('nav-post', Nav);
+export default Nav;
