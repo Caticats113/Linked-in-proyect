@@ -1,4 +1,4 @@
-import data from "./data";
+import data from "./components/data";
 import * as components from "./components/export";
 
 class AppContainer extends HTMLElement{
@@ -6,12 +6,6 @@ class AppContainer extends HTMLElement{
         super();
         this.attachShadow({mode: "open"})
 
-        this.lkd=[];
-        var i=0;
-        while(i<data.length){
-            this.lkd.push(data[i]);
-            i++;
-        }
     }
 
     connectedCallback(){
@@ -19,9 +13,10 @@ class AppContainer extends HTMLElement{
     }
 
     render(){
+        console.log(data);
         data.forEach((lkd)=>{
-            this.shadowRoot.innerHTML += `<link rel="stylesheet" href="./src/components/card/card.css" type="text/html">
-            <card-post name="${lkd.name}" profile="${lkd.photoPerfil}" info="${lkd.info}" post="${lkd.post}" ></card-post>`
+            this.shadowRoot.innerHTML += `
+            <dashboard-post userName="${lkd.username}" userPfp="${lkd.userpfp}" postText="${lkd.posttext}" postImage="${lkd.postimage}"></dashboard-post>`
 
         })
     }

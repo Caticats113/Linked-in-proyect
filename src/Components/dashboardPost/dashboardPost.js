@@ -1,7 +1,7 @@
 class DashboardPost extends HTMLElement {
 
     static get observedAttributes() {
-        return ["userPfp", "userName", "postText", "postImage"];
+        return ["username","userpfp", "posttext", "postimage"];
     }
 
     constructor() {
@@ -19,14 +19,15 @@ class DashboardPost extends HTMLElement {
     }
 
     render(){
+        console.log(this.userPfp);
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./src/components/dashboardPost/dashboardPost.css">
         <div>
-            <img src="${this.userPfp}">
-            <label>${this.userName}</label>
+            <img src="${this.userpfp}">
+            <label>${this.username}</label>
         </div>
-        <p>${this.postText}</p>
-        <img src="${this.postImage}">
+        <p>${this.posttext}</p>
+        <img src="${this.postimage}">
         `;
     }
 }
