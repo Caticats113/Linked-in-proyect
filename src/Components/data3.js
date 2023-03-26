@@ -1,11 +1,11 @@
 const data3 =[
 
     {
-        userpfp:"../../dist/imagenes/logo-dian.png",
+        userpfp:"../../dist/imagenes/dian.png",
         username:"DIAN",
     },
     {
-        userpfp:"../../dist/imagenes/logo-coomeva.jpg",
+        userpfp:"../../dist/imagenes/coomeva.jpg",
         username:"Coomeva",
     },
     {
