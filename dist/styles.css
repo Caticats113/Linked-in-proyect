@@ -37,9 +37,10 @@ follow-recoms{
     display: flex;
     flex-direction: column;
     width: fit-content;
-    background-color: white;
+    background-color:white;
     border-radius: 5%;
     height: fit-content;
+    margin: 5% 3%;
 }
 
 follow-recompfp{
@@ -48,9 +49,12 @@ follow-recompfp{
     align-items: center;
     width: fit-content;
     margin: 5% 3%;
+    padding: 5%;
 }
 .pfr{
     width: 30%;
+    border-radius: 5%;
+
 }
 
 app-container{
@@ -71,6 +75,7 @@ app-container{
     flex-direction: row;
     align-items: center;
     gap: 5%;
+    margin: 5% 3%;
 }
 
 .pf{
@@ -104,5 +109,77 @@ my-sidebar{
 app-container{
     margin-left: 0;
 }
+}
 
+create-post{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    border-radius: 30px;
+    padding: 5%;
+    background-color: white;
+    margin: 5%;
+}
+
+.creted{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 3%;
+}
+#perfil{
+    width: 15%;
+    height: 15%;
+}
+#navv{
+    padding: 3%;
+    border-radius: 20px;
+    width: 150%;
+    background-color: white;
+    width: inherit;
+}
+.create{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    justify-content: space-around;
+}
+.iconos{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 30px;
+    width: fit-content;
+    align-items: center;
+
+}
+
+.buscador{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin: 0% 3%;
+}
+
+#in{
+    width: 10%;
+    height:auto ;
+    margin: 0% 2%;
+}
+
+input{
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    border-width: 0;
+}
+
+button{
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+    border-radius: 5%;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.47);
+    border-color:rgba(186, 186, 186, 0.196);
 }

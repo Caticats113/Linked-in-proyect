@@ -1,12 +1,13 @@
-import data from "./components/data";
+import data from "./Components/data";
 import data2 from "./Components/data2";
 import data3 from "./Components/data3";
-import * as components from "./components/export";
+import * as Components from "./Components/export";
 
 class AppContainer extends HTMLElement{
     constructor(){
         super();
         this.attachShadow({mode: "open"})
+        console.log(data);
     };
 
     connectedCallback(){
@@ -19,8 +20,16 @@ class AppContainer extends HTMLElement{
     };
 
     render(){
-            data.forEach((lkd)=>{
+
+                this.shadowRoot.innerHTML +=`
+                <nav-post></nav-post>`
+
                 this.shadowRoot.innerHTML += `
+                <create-post></create-post>
+                `
+                data.forEach((lkd)=>{
+                this.shadowRoot.innerHTML += `
+                <link rel="stylesheet" href="./styles.css">
                 <dashboard-post userName="${lkd.username}" userPfp="${lkd.userpfp}" postText="${lkd.posttext}" postImage="${lkd.postimage}"></dashboard-post>`
             }
         )
@@ -74,6 +83,7 @@ class FollowRecoms extends HTMLElement {
     }
 
     render(){
+
         data3.forEach((fw)=>{
             this.shadowRoot.innerHTML += `
             <link rel="stylesheet" href="./styles.css">

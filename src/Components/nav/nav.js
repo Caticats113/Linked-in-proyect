@@ -1,8 +1,4 @@
-class FollowRecompfp extends HTMLElement {
-
-    static get observedAttributes() {
-        return ["userpfp", "username"];
-    }
+class Nav extends HTMLElement{
 
     constructor() {
         super();
@@ -21,11 +17,13 @@ class FollowRecompfp extends HTMLElement {
     render(){
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./styles.css">
-        <img class="pfr" src="${this.userpfp}"><label>${this.username}</label>
-        <button>Seguir</button>
-        `;
+        <section class="buscador">
+        <img id="in" src="./imagenes/in.png">
+        <input id="navv" placeholder="search...">
+        </section>`;
+
     }
 }
 
-customElements.define('follow-recompfp', FollowRecompfp);
-export default FollowRecompfp;
+customElements.define('nav-post', Nav);
+export default Nav;
