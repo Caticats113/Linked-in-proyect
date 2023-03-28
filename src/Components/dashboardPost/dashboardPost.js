@@ -1,7 +1,7 @@
 class DashboardPost extends HTMLElement {
 
     static get observedAttributes() {
-        return ["username","userpfp", "posttext", "postimage"];
+        return ["username","userpfp", "posttext", "postimage","like","coment","actu","send"];
     }
 
     constructor() {
@@ -28,7 +28,13 @@ class DashboardPost extends HTMLElement {
             </div>
             <p>${this.posttext}</p>
             <img class="pst" src="${this.postimage}">
-        </div>`;
+            <section class="posticonos">
+            <img src="./imagenes/like.png">
+            <img src="./imagenes/comentario.png">
+            <img src="./imagenes/actualizar.png">
+            <img src="./imagenes/avion.png">
+            </section>
+            </div>`;
     }
 }
 

@@ -19,11 +19,10 @@ class FollowRecoms extends HTMLElement {
 
     render(){
         this.shadowRoot.innerHTML =
-        data3.forEach((fw)=>{
+
             this.shadowRoot.innerHTML += `
             <link rel="stylesheet" href="./styles.css">
             <follow-recoms userpfp="${fw.userpfp}" username="${fw.username}"></follow-recoms>`
-        })
     }
 }
 

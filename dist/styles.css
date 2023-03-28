@@ -36,7 +36,7 @@ sidebar-icon{
 follow-recoms{
     display: flex;
     flex-direction: column;
-    width: max-content;
+    width: 30%;
     background-color:white;
     border-radius: 5%;
     height: fit-content;
@@ -45,8 +45,8 @@ follow-recoms{
 
 follow-recompfp{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items:normal;
     width: 100%;
     margin: 5% 3%;
     padding: 5%;
@@ -81,6 +81,20 @@ app-container{
     margin-bottom: 5%;
 }
 
+.posticonos{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+.posticonos img{
+    width: 7%;
+}
+
 .pf{
     width: 15%;
     border-radius: 100%;
@@ -112,6 +126,7 @@ my-sidebar{
 app-container{
     margin-left: 0;
 }
+
 }
 
 create-post{

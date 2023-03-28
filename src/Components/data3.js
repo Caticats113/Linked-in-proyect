@@ -5,7 +5,7 @@ const data3 =[
         username:"DIAN",
     },
     {
-        userpfp:"../../dist/imagenes/coomeva.jpg",
+        userpfp:"../../dist/imagenes/coomeva.png",
         username:"Coomeva",
     },
     {

@@ -30,7 +30,7 @@ class AppContainer extends HTMLElement{
                 data.forEach((lkd)=>{
                 this.shadowRoot.innerHTML += `
                 <link rel="stylesheet" href="./styles.css">
-                <dashboard-post userName="${lkd.username}" userPfp="${lkd.userpfp}" postText="${lkd.posttext}" postImage="${lkd.postimage}"></dashboard-post>`
+                <dashboard-post userName="${lkd.username}" userPfp="${lkd.userpfp}" postText="${lkd.posttext}" postImage="${lkd.postimage}" like="${lkd.like}" coment="${lkd.coment}" actu="${lkd.actu}" send="${lkd.send}"></dashboard-post>`
             }
         )
     };
