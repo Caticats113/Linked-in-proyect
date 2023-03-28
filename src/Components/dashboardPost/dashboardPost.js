@@ -28,13 +28,13 @@ class DashboardPost extends HTMLElement {
             </div>
             <p>${this.posttext}</p>
             <img class="pst" src="${this.postimage}">
-            <section class="posticonos">
-            <img src="./imagenes/like.png">
-            <img src="./imagenes/comentario.png">
-            <img src="./imagenes/actualizar.png">
-            <img src="./imagenes/avion.png">
-            </section>
-            </div>`;
+                <section class="posticonos">
+                    <img src="./imagenes/like.png">
+                    <img src="./imagenes/comentario.png">
+                    <img src="./imagenes/actualizar.png">
+                    <img src="./imagenes/avion.png">
+                </section>
+        </div>`;
     }
 }
 

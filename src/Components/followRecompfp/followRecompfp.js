@@ -22,10 +22,10 @@ class FollowRecompfp extends HTMLElement {
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./styles.css">
         <img class="pfr" src="${this.userpfp}">
-        <section class="userRecom">
-            <label>${this.username}</label>
-            <button>+ Seguir</button>
-        </section>
+            <section class="userRecom">
+                <label>${this.username}</label>
+                <button>+ Seguir</button>
+            </section>
         `;
     }
 }

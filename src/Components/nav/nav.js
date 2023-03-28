@@ -18,8 +18,8 @@ class Nav extends HTMLElement{
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./styles.css">
         <section class="buscador">
-        <img id="in" src="./imagenes/in.png">
-        <input id="navv" placeholder="search...">
+            <img id="in" src="./imagenes/in.png">
+            <input id="navv" placeholder="search...">
         </section>`;
 
     }

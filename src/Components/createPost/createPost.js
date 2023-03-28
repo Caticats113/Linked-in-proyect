@@ -18,16 +18,16 @@ class CreatePost extends HTMLElement{
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./styles.css">
         <div class="creted">
-        <section class="create">
-        <img id="perfil" src="./imagenes/perfil.png">
-        <input id="navv" placeholder="create...">
-        </section>
-        <section class="iconos">
-        <img src="./imagenes/imagen.png">
-        <img src="./imagenes/youtube.png">
-        <img src="./imagenes/calendario.png">
-        <img src="./imagenes/menu.png">
-        </section>
+            <section class="create">
+                <img id="perfil" src="./imagenes/perfil.png">
+                <input id="navv" placeholder="create...">
+            </section>
+                <section class="iconos">
+                    <img src="./imagenes/imagen.png">
+                    <img src="./imagenes/youtube.png">
+                    <img src="./imagenes/calendario.png">
+                    <img src="./imagenes/menu.png">
+                </section>
         </div>
 
         `;
