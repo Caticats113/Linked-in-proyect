@@ -63,9 +63,9 @@ export default class Card extends HTMLElement{
     </section>
 
         </div>`;
-        const css = this.ownerDocument.createElement("style");
-        css.innerHTML = styles;
-        this.shadowRoot?.appendChild(css);
+        // const css = this.ownerDocument.createElement("style");
+        // css.innerHTML = styles;
+        // this.shadowRoot?.appendChild(css);
 
     }
 
