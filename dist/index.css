@@ -15,13 +15,3 @@ body{
     flex-direction: row;
 }
 
-create-post{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 30px;
-    padding: 5%;
-    background-color: white;
-    margin: 5%;
-}
-
