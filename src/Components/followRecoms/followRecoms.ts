@@ -1,54 +1,35 @@
-import styles from "./followRecoms.css";
+import FollowRecomI, { Attribute } from "../followRecomI/followRecomI";
 
-export enum Attribute{
-    "username"="username",
-    "userpfp"="userpfp",
- }
+import { dataR } from "../../mocks/getData";
+import { DataR } from "../../types/dataR";
 
-export default class FollowRecoms extends HTMLElement{
+export default class FollowRecoms extends HTMLElement {
+    datarr: FollowRecomI[] = [];
 
-
-    username?: string;
-    userpfp?: string;
-
-    constructor(){
+    constructor() {
         super();
-        this.attachShadow({mode:"open"});
-
-    }
-
-    static get observedAttributes(){
-        const attrs: Record<Attribute,null>={
-            username: null,
-            userpfp: null,
-        }
-        return Object.keys(attrs);
+        this.attachShadow({ mode: "open" })
     }
 
 
-    connectedCallback(){
+    async connectedCallback() {
         this.render()
     }
 
-    attributeChangedCallback( propName:Attribute, _:string | undefined, newValue: string |undefined){
-        switch (propName) {
-            default:
-            this[propName] = newValue;
-            break;
+    render() {
+        if (this.shadowRoot) {
+            this.shadowRoot.innerHTML = `
+            <link rel="stylesheet" href="../src/Components/followRecoms/followRecoms.css">
+            <link rel="stylesheet" href="./index.css">
+    `};
+
+        dataR?.forEach((a: DataR) => {
+            const pruf = this.ownerDocument.createElement("follow-recomi")
+            pruf.setAttribute(Attribute.username, a.username);
+            pruf.setAttribute(Attribute.userpfp, a.userpfp);
+            this.shadowRoot?.appendChild(pruf);
+        })
     }
-
-        this.render();
-    }
-
-    render(){
-
-        if(this.shadowRoot) this.shadowRoot.innerHTML =`
-        <img class="pfr" src="${this.userpfp}">
-        <section class="userRecom">
-            <label>${this.username}</label>
-            <button>+ Seguir</button>
-        </section>`;
-    }
-
 }
-customElements.define('follow-recoms',FollowRecoms );
+
+customElements.define('follow-recoms', FollowRecoms);

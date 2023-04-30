@@ -1,7 +1,6 @@
 export interface Data{
-    username: String;
-    userpfp: String;
-    posttext:String;
-    postimage:String;
-
+    username: string;
+    userpfp: string;
+    posttext: string;
+    postimage: string;
 }

@@ -1,0 +1,54 @@
+.creted{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 3%;
+}
+
+.create{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    align-items:center ;
+}
+
+#perfil{
+    width: 15%;
+    height: 15%;
+}
+
+.iconos{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+.iconos img{
+    width: 7%;
+    cursor: pointer;
+}
+
+#navv{
+    font-family: 'Montserrat', sans-serif;
+    border-width: 0;
+    padding: 20px;
+    border-radius: 20px;
+    height: 10px;
+    background-color:#E3E3E3;
+    width: 75%;
+}
+
+@media (max-width: 900px){
+    .iconos img{
+        padding-top: 3%;
+        width:10%;
+    }
+
+    #navv{
+        padding: 15px;
+    }
+}
