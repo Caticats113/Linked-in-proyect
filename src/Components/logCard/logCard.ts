@@ -17,24 +17,26 @@ export default class LogCard extends HTMLElement{
             if(this.shadowRoot)this.shadowRoot.innerHTML='';
 
             const login=this.ownerDocument.createElement('h1')
-            this.textContent="Log in";
+            login.textContent="Log in";
             this.shadowRoot?.appendChild(login);
 
             const email=this.ownerDocument.createElement('input');
-            this.innerHTML="Email";
+            email.textContent="Email";
             this.shadowRoot?.appendChild(email);
 
             const password=this.ownerDocument.createElement('input');
-            this.innerHTML="Password";
+            password.textContent="Password";
             this.shadowRoot?.appendChild(password);
 
             const forgetPassword=this.ownerDocument.createElement('h3')
-            this.textContent="Did you forget your password?";
+            forgetPassword.textContent="Did you forget your password?";
             this.shadowRoot?.appendChild(forgetPassword);
 
             const logButton=this.ownerDocument.createElement('button');
-            this.innerHTML="Sing Up";
+            logButton.textContent="Sing Up";
             this.shadowRoot?.appendChild(logButton);
+
+
 
         }
 

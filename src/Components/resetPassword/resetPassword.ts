@@ -17,20 +17,20 @@ export default class ResetPassword extends HTMLElement{
             if(this.shadowRoot)this.shadowRoot.innerHTML='';
 
             const reset=this.ownerDocument.createElement('h1')
-            this.textContent="Reset password";
+            reset.textContent="Reset password";
             this.shadowRoot?.appendChild(reset);
 
             const newPassword=this.ownerDocument.createElement('input');
-            this.innerHTML="Enter new password";
+            newPassword.textContent="Enter new password";
             this.shadowRoot?.appendChild(newPassword);
 
             const repeatPassword=this.ownerDocument.createElement('input');
-            this.innerHTML="Repeat password";
+            repeatPassword.textContent="Repeat password";
             this.shadowRoot?.appendChild(repeatPassword);
 
 
             const restButton=this.ownerDocument.createElement('button');
-            this.innerHTML="Reset ";
+            restButton.textContent="Reset ";
             this.shadowRoot?.appendChild(restButton);
 
         }
