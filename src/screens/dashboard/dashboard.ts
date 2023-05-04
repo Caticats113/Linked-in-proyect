@@ -1,6 +1,7 @@
 import { datas } from "../../mocks/getData";
 import { Data } from "../../types/data";
 import Card, { Attributes } from "../../Components/card/card";
+import { addObserver, appState, dispatch } from "../../store/index";
 
 class Dashboard extends HTMLElement {
     datass: Card[] = [];

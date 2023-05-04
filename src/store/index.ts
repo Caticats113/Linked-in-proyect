@@ -32,9 +32,9 @@ export const dispatch =(action:Actions) =>{
     notifyObservers();
 };
 
-// export const addObserver=(ref:observed)=>{
-//     observers=[...observers,ref];
-// };
+export const addObserver=(ref:Observed)=>{
+    observers=[...observers,ref];
+};
 
 
 
