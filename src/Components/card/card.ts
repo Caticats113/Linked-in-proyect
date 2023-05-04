@@ -1,4 +1,5 @@
 import styles from "./card.css";
+import {appState} from "../../store/index"; //Import the store
 
 export enum Attributes {
     "username" = "username",
@@ -44,9 +45,12 @@ export default class Card extends HTMLElement {
     }
 
     render() {
+
+        // const name=this.ownerDocument.createElement('h3');
+        // name.textContent=appState.username;
+
+        // this.shadowRoot?.appendChild(name);
         if (this.shadowRoot) this.shadowRoot.innerHTML = `<div class="post">
-        <link rel="stylesheet" href="../src/Components/card/card.css">
-        <link rel="stylesheet" href="./index.css">
 
         <div class="userPost">
             <img class="pf" src="${this.userpfp}">
@@ -61,10 +65,9 @@ export default class Card extends HTMLElement {
                 <img src="./imagenes/avion.png">
             </section>
         </div>`;
-        // const css = this.ownerDocument.createElement("style");
-        // css.innerHTML = styles;
-        // this.shadowRoot?.appendChild(css);
-
+        const css = this.ownerDocument.createElement("style");
+                css.innerHTML = styles;
+                this.shadowRoot?.appendChild(css);
     }
 
 }
