@@ -1,5 +1,5 @@
-import { datas } from "../../mocks/getData";
-import { Data } from "../../types/data";
+import { datasI } from "../../mocks/getData";
+import { Data } from "../../types/store";
 import Card, { Attributes } from "../../Components/card/card";
 
 class Dashboard extends HTMLElement {
@@ -8,7 +8,7 @@ class Dashboard extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
 
-        datas?.forEach((e: Data) => {
+        datasI?.forEach((e: Data) => {
             const prof = this.ownerDocument.createElement(
                 "app-card"
             ) as Card;

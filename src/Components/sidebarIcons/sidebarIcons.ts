@@ -1,5 +1,5 @@
-import { barData } from "../../mocks/getData";
-import { BarData } from "../../types/barData";
+import { barDataI } from "../../mocks/getData";
+import { BarData } from "../../types/store";
 
 export default class sidebarIcon extends HTMLElement{
     constructor(){
@@ -20,7 +20,7 @@ export default class sidebarIcon extends HTMLElement{
         const container = this.ownerDocument.createElement('div');
         container.setAttribute('id', 'sidebar');
 
-        barData.map ((e:BarData)=> {
+        barDataI.map ((e:BarData)=> {
             const barIcon = this.ownerDocument.createElement('img');
             barIcon.setAttribute('src',`${e.imgSource}`);
             barIcon.setAttribute('href',`${e.linkRef}`);

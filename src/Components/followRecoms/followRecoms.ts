@@ -1,7 +1,7 @@
 import FollowRecomI, { Attribute } from "../followRecomI/followRecomI";
 
-import { dataR } from "../../mocks/getData";
-import { DataR } from "../../types/dataR";
+import { dataRI } from "../../mocks/getData";
+import { DataR } from "../../types/store";
 
 export default class FollowRecoms extends HTMLElement {
     datarr: FollowRecomI[] = [];
@@ -23,7 +23,7 @@ export default class FollowRecoms extends HTMLElement {
             <link rel="stylesheet" href="./index.css">
     `};
 
-        dataR?.forEach((a: DataR) => {
+        dataRI?.forEach((a: DataR) => {
             const pruf = this.ownerDocument.createElement("follow-recomi")
             pruf.setAttribute(Attribute.username, a.username);
             pruf.setAttribute(Attribute.userpfp, a.userpfp);

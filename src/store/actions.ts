@@ -5,4 +5,4 @@ export const navigate = (screen: Screens): NavigateAction => {
         action: NavigationActions.NAVIGATE,
         payload: screen,
     };
-};  
+};

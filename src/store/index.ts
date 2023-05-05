@@ -3,7 +3,7 @@ import { Actions, AppState, Data, DataR, BarData, Observer, Screens } from "../t
 import { reducer } from "./reducer";
 import { barDataI, dataRI, datasI } from "../mocks/getData";
 
-const emptyState: AppState = {
+const emptyState: AppState ={
     screen: Screens.LOGIN,
     dataR: dataRI,
     datas : datasI,
