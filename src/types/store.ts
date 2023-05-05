@@ -1,4 +1,5 @@
 import {Data} from "./data";
+import { DataR } from "./dataR";
 
 export type Observed =({ render:() => void} & HTMLElement);
 
@@ -13,33 +14,55 @@ export enum Screens {
     RESET = "RESET"
 }
 
-export type AppState ={
-    screen: Screens;
-    data: Data[]
-}
+    export type AppState ={
+        screen: Screens;
+        data: Data[],
+        datar: DataR[]
+    }
 
-export enum CardActions{
-    "ADD" = "ADD",
-    "GET" = "GET",
-}
+    export enum RecomsActions{
+        "ADD" = "ADD",
+        "GET" = "GET",
+    }
 
-export interface AddCardAction{
-    action: CardActions.ADD,
-    payload:Data,
-}
+    export enum CardActions{
+        "ADD" = "ADD",
+        "GET" = "GET",
+    }
 
-export interface GetCardAction{
-    action: CardActions.GET,
-    payload: Data[]
-}
+    export interface AddRecomsAction{
+        action: RecomsActions.ADD,
+        payload:DataR,
+    }
 
-export enum NavigationActions {
-    "NAVIGATE" = "NAVIGATE",
-}
+    export interface GetRecomsAction{
+        action: RecomsActions.GET,
+        payload: DataR[]
+    }
+
 
 export interface NavigateAction {
-    action: NavigationActions.NAVIGATE | String,
+    action: NavigationActions.NAVIGATE,
     payload: Screens,
 }
 
-export type Actions = AddCardAction| GetCardAction | NavigateAction;
+    export interface AddCardAction{
+        action: CardActions.ADD,
+        payload:Data,
+    }
+
+    export interface GetCardAction{
+        action: CardActions.GET,
+        payload: Data[]
+    }
+
+    export enum NavigationActions {
+        "NAVIGATE" = "NAVIGATE",
+    }
+
+    export interface NavigateAction {
+        action: NavigationActions.NAVIGATE,
+        payload: Screens,
+    }
+
+export type Actions = AddCardAction| GetCardAction | AddRecomsAction | GetRecomsAction|NavigateAction;

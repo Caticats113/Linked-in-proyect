@@ -9,7 +9,8 @@ const emptyState:AppState = { // Create the appState and we export it
     // postimage:"",
 
     screen: Screens.LOGIN,
-    data: []
+    data: [],
+    datar:[],
 };
 
 export let appState = Storage.get<AppState>({

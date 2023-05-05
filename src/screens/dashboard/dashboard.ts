@@ -1,6 +1,13 @@
 import { datas } from "../../mocks/getData";
 import { Data } from "../../types/data";
+import data from "../../services/data";
+import dataR from "../../services/dataR";
+import { DataR } from "../../types/dataR";
 import Card, { Attributes } from "../../Components/card/card";
+import FollowRecomI, { Attributte } from "../../Components/followRecomI/followRecomI";
+import { getData } from "../../store/actions";
+import { getDataR } from "../../store/actions";
+import { addObserver, appState, dispatch } from "../../store/index";
 
 export default class Dashboard extends HTMLElement {
     datass: Card[] = [];
@@ -8,23 +15,48 @@ export default class Dashboard extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
 
-        datas?.forEach((e: Data) => {
-            const prof = this.ownerDocument.createElement(
-                "app-card"
-            ) as Card;
-            prof.setAttribute(Attributes.username, e.username);
-            prof.setAttribute(Attributes.userpfp, e.userpfp);
-            prof.setAttribute(Attributes.posttext, e.posttext);
-            prof.setAttribute(Attributes.postimage, e.postimage);
-
-            this.datass.push(prof);
-        });
 
     }
 
     async connectedCallback() {
+       const datass = await data.get();
+       datass?.forEach((e: Data) => {
+        const prof = this.ownerDocument.createElement(
+            "app-card"
+        ) as Card;
+        prof.setAttribute(Attributes.username, e.username);
+        prof.setAttribute(Attributes.userpfp, e.userpfp);
+        prof.setAttribute(Attributes.posttext, e.posttext);
+        prof.setAttribute(Attributes.postimage, e.postimage);
+
+        this.datass.push(prof);
+    });
+
+    const datarr=await dataR.get();
+    datarr?.forEach((a: DataR) => {
+        const pruf = this.ownerDocument.createElement("follow-recomi")as FollowRecomI;
+        pruf.setAttribute(Attributte.username, a.username);
+        pruf.setAttribute(Attributte.userpfp, a.userpfp);
+        this.shadowRoot?.appendChild(pruf);
+    })
+
+
+        if (appState.data.length === 0) {
+            const action = await getData();
+
+          } else {
             this.render();
-    }
+          }
+
+          if (appState.datar.length === 0) {
+            const action = await getDataR();
+
+          } else {
+            this.render();
+          }
+
+      }
+
 
     render() {
         if (this.shadowRoot) this.shadowRoot.innerHTML = `
@@ -42,6 +74,7 @@ export default class Dashboard extends HTMLElement {
         const createPost = this.ownerDocument.createElement('create-post');
         mainDashboard.appendChild(createPost);
 
+
         const card = this.ownerDocument.createElement("section")
         card.className = "card";
         for (let index = 0; index < this.datass.length; index++) {
@@ -53,6 +86,7 @@ export default class Dashboard extends HTMLElement {
         //recoms
         const followRecoms = this.ownerDocument.createElement('follow-recoms');
         this.shadowRoot?.appendChild(followRecoms);
+
     }
 }
 

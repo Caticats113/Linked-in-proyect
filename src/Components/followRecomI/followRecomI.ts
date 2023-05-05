@@ -1,4 +1,4 @@
-export enum Attribute {
+export enum Attributte {
     "username" = "username",
     "userpfp" = "userpfp",
 }
@@ -14,7 +14,7 @@ export default class FollowRecomI extends HTMLElement {
     }
 
     static get observedAttributes() {
-        const attrs: Record<Attribute, null> = {
+        const attrs: Record<Attributte, null> = {
             username: null,
             userpfp: null,
         }
@@ -25,7 +25,7 @@ export default class FollowRecomI extends HTMLElement {
         this.render()
     }
 
-    attributeChangedCallback(propName: Attribute, _: string | undefined, newValue: string | undefined) {
+    attributeChangedCallback(propName: Attributte, _: string | undefined, newValue: string | undefined) {
         switch (propName) {
             default:
                 this[propName] = newValue;
