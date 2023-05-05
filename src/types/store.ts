@@ -1,24 +1,42 @@
 import {Data} from "./data";
+import { DataR } from "./dataR";
 
 export type Observed =({ render:() => void} & HTMLElement);
 
-export type AppState ={
-    data: Data[]
-}
+    export type AppState ={
+        data: Data[],
+        datar: DataR[]
+    }
 
-export enum CardActions{
-    "ADD" = "ADD",
-    "GET" = "GET",
-}
+    export enum RecomsActions{
+        "ADD" = "ADD",
+        "GET" = "GET",
+    }
 
-export interface AddCardAction{
-    action: CardActions.ADD,
-    payload:Data,
-}
+    export interface AddRecomsAction{
+        action: RecomsActions.ADD,
+        payload:DataR,
+    }
 
-export interface GetCardAction{
-    action: CardActions.GET,
-    payload: Data[]
-}
+    export interface GetRecomsAction{
+        action: RecomsActions.GET,
+        payload: DataR[]
+    }
 
-export type Actions = AddCardAction| GetCardAction;
+
+    export enum CardActions{
+        "ADD" = "ADD",
+        "GET" = "GET",
+    }
+
+    export interface AddCardAction{
+        action: CardActions.ADD,
+        payload:Data,
+    }
+
+    export interface GetCardAction{
+        action: CardActions.GET,
+        payload: Data[]
+    }
+
+export type Actions = AddCardAction| GetCardAction | AddRecomsAction | GetRecomsAction;

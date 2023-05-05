@@ -1,4 +1,5 @@
-import FollowRecomI, { Attribute } from "../followRecomI/followRecomI";
+import FollowRecomI, { Attributte } from "../followRecomI/followRecomI";
+import {appState} from "../../store/index";
 
 import { dataR } from "../../mocks/getData";
 import { DataR } from "../../types/dataR";
@@ -25,8 +26,8 @@ export default class FollowRecoms extends HTMLElement {
 
         dataR?.forEach((a: DataR) => {
             const pruf = this.ownerDocument.createElement("follow-recomi")
-            pruf.setAttribute(Attribute.username, a.username);
-            pruf.setAttribute(Attribute.userpfp, a.userpfp);
+            pruf.setAttribute(Attributte.username, a.username);
+            pruf.setAttribute(Attributte.userpfp, a.userpfp);
             this.shadowRoot?.appendChild(pruf);
         })
     }

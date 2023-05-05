@@ -12,8 +12,8 @@ export const datas: Data[] = [
     {
         username: "Epson LatinoAmerica",
         userpfp: "https://yt3.googleusercontent.com/ytc/AL5GRJUpjbYn2nRTs6pKoZsmN1wr8vu1KtvcA1_xsPqW9w=s900-c-k-c0x00ffffff-no-rj",
-        posttext: "Nuevas impresoras y multifuncionales para actualizar a tu empresa.",
-        postimage: "https://media.licdn.com/dms/image/D4E10AQEY7vD-qP54uw/image-shrink_800/0/1680290074343?e=1683068400&v=beta&t=oquNOgQVzX_PVIt0onlplkoxo75uJ6ZD12Drmd1BWN8"
+        posttext: "Los resultados de nuestra última encuesta de cambio climático sólo nos alienta y reafirma nuestra dirección. El 63% de las personas estarían listas para no adherir a marcas que no son sustentables en su lucha contra el cambio climático. Sigamos trabajando juntos por nuestro planeta.",
+        postimage: "https://media.licdn.com/dms/image/D4E10AQFaCKSbDB0phg/image-shrink_1280/0/1681501000060?e=1683925200&v=beta&t=S39EkckMacAqRBpqnCZDjsBK9BODlJa_8hhmXc2PhDY"
     },
     {
         username: "MIU City University Miami",
@@ -24,8 +24,8 @@ export const datas: Data[] = [
     {
         username: "SUSE",
         userpfp: "https://www.ecured.cu/images/f/f0/Suse.png",
-        posttext: "Tomorrow, Wednesday, April 26th, join #SUSE and other leading #cloud and microservices experts at #DevOps SKILup Day: CI/CD, organized by DevOps Institute.",
-        postimage: "https://media.licdn.com/dms/image/sync/D4E10AQGjLGcBc-YbSw/image-shrink_800/0/1682424015620?e=1683201600&v=beta&t=-iLtvoF3ky0NR9zisCwXgIZsjWED9pka_yLrCCRy6-o"
+        posttext: "We are excited to officially welcome Dirk-Peter van Leeuwen (DP) on his first day as our new CEO. He’s an engineer at heart and a veteran of the enterprise #opensource software industry, having built and led businesses around the world.",
+        postimage: "https://media.licdn.com/dms/image/sync/D4E10AQFedS3GCJWdTg/image-shrink_800/0/1682923807806?e=1683925200&v=beta&t=ZjFNrxQDaHNx1DIq5QqUPA2I59gM_wU7WOb3pgJSdm4"
     },
     {
         username: "Deel",

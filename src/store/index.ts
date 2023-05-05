@@ -9,6 +9,7 @@ const emptyState:AppState = { // Create the appState and we export it
     // postimage:"",
 
     data: [],
+    datar:[],
 };
 
 export let appState = Storage.get<AppState>({
