@@ -1,4 +1,4 @@
-import { AddCardAction, GetCardAction, CardActions } from '../types/store';
+import { AddCardAction, GetCardAction, CardActions, NavigateAction, NavigationActions, Screens } from '../types/store';
 import data from '../services/data'
 
 
@@ -10,9 +10,16 @@ export const getData = async (): Promise<GetCardAction> => {
     }
 }
 
-export const addNewTrip = ({payload}: Pick<AddCardAction, "payload">): AddCardAction => {
+export const addNewPost = ({payload}: Pick<AddCardAction, "payload">): AddCardAction => {
     return {
         action: CardActions.ADD,
         payload
+    }
+}
+
+export const navigate = (screen: Screens): NavigateAction => {
+    return {
+        action: NavigationActions.NAVIGATE,
+        payload: screen
     }
 }

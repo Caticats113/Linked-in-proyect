@@ -27,13 +27,13 @@ class Dashboard extends HTMLElement {
 
     async connectedCallback() {
         if (appState.data.length === 0) {
-          const action = await getData();
-          dispatch(action);
+            const action = await getData();
+            dispatch(action);
+            this.render()
         } else {
-          this.render();
+            this.render();
         }
-      }
-
+    }
 
     render() {
         if (this.shadowRoot) this.shadowRoot.innerHTML = `

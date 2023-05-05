@@ -1,27 +1,33 @@
-import { Actions,AppState,CardActions } from "../types/store";
+import { Actions, AppState, CardActions, NavigationActions } from "../types/store";
 
-export const reducer =(currentAction: Actions, currentState: AppState): AppState =>{
-    const{action, payload}=currentAction;
+export const reducer = (currentAction: Actions, currentState: AppState): AppState => {
+    const { action, payload } = currentAction;
+    const clone = JSON.parse(JSON.stringify(currentState));
 
-switch(action){
-    case CardActions.ADD:
-        return{
-            ...currentState,
-            data:[
-                payload,
-                ...currentState.data,
+    switch (action) {
+        case CardActions.ADD:
+            return {
+                ...clone,
+                data: [
+                    payload,
+                    ...clone.data,
+                ]
+            }
 
-            ]
-        }
-    case CardActions.GET:
-        return{
-            ...currentState,
-            data: payload
-        }
+        case CardActions.GET:
+            return {
+                ...clone,
+                data: payload
+            }
 
-        defeault:
+            case NavigationActions.NAVIGATE:
+            return {
+                ...clone,
+                screen: payload,
+            }
 
-        return currentState;
+            defeault:
+            return clone;
 
     }
 }

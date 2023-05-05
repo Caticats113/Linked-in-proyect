@@ -2,7 +2,19 @@ import {Data} from "./data";
 
 export type Observed =({ render:() => void} & HTMLElement);
 
+export enum Screens {
+    LOGIN = "LOGIN",
+    SIGNUP = "SIGNUP",
+    DASHBOARD = "DASHBOARD",
+    EXPLORER = "EXPLORER",
+    JOBS = "JOBS",
+    NOTIFICATIONS = "NOTIFICATIONS",
+    RESET_PASWORD = "RESET_PASWORD",
+    RESET = "RESET"
+}
+
 export type AppState ={
+    screen: Screens;
     data: Data[]
 }
 
@@ -21,4 +33,13 @@ export interface GetCardAction{
     payload: Data[]
 }
 
-export type Actions = AddCardAction| GetCardAction;
+export enum NavigationActions {
+    "NAVIGATE" = "NAVIGATE",
+}
+
+export interface NavigateAction {
+    action: NavigationActions.NAVIGATE,
+    payload: Screens,
+}
+
+export type Actions = AddCardAction| GetCardAction | NavigateAction;
