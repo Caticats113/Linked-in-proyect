@@ -33,7 +33,7 @@ export default class FollowRecomI extends HTMLElement {
         }
 
         this.render();
-    }
+    };
 
     render() {
         if (this.shadowRoot) this.shadowRoot.innerHTML = `

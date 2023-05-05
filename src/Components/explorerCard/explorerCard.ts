@@ -3,11 +3,10 @@ export default class ExplorerCard extends HTMLElement{
 
     constructor(){
             super();
-            this.attachShadow({mode:"open"});
-
+            this.attachShadow({mode:"open"})
         }
 
-         connectedCallback(){
+        connectedCallback(){
 
             this.render()
         }

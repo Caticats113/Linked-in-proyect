@@ -77,6 +77,9 @@ class AppContainer extends HTMLElement {
                 break
 
             case Screens.RESET_PASWORD:
+                document.body.style.backgroundImage = "url(./imagenes/logInBackground.png)"
+                document.body.style.backgroundColor = "#C0F6F8";
+                document.body.style.backgroundSize = "cover"
                 if (this.shadowRoot)this.shadowRoot.innerHTML = `
                 <link rel="stylesheet" href="../src/appContainer.css">`
 
@@ -85,6 +88,9 @@ class AppContainer extends HTMLElement {
                 break
 
             case Screens.RESET:
+                document.body.style.backgroundImage = "url(./imagenes/logInBackground.png)"
+                document.body.style.backgroundColor = "#C0F6F8";
+                document.body.style.backgroundSize = "cover"
                 if (this.shadowRoot)this.shadowRoot.innerHTML = `
                 <link rel="stylesheet" href="../src/appContainer.css">`
 

@@ -34,6 +34,10 @@ export default class LogCard extends HTMLElement {
 
         const forgetPassword = this.ownerDocument.createElement('h3')
         forgetPassword.textContent = "Did you forget your password?";
+        forgetPassword.addEventListener("click", ()=>{
+            dispatch(navigate(Screens.RESET))
+        })
+
         this.shadowRoot?.appendChild(forgetPassword);
 
         const logButton = this.ownerDocument.createElement('button');
