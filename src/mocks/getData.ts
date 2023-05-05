@@ -1,6 +1,7 @@
 import { Data } from "../types/data";
 import { DataR } from "../types/dataR";
 import { BarData } from "../types/barData";
+import { Screens } from "../types/store";
 
 export const datas: Data[] = [
     {
@@ -53,22 +54,22 @@ export const dataR: DataR[] = [
 export const barData: BarData[] = [
     {
         imgSource: "./imagenes/hogar.png",
-        linkRef: ""
+        linkRef: Screens.LOGIN
     },
     {
         imgSource: "./imagenes/globo.png",
-        linkRef: ""
+        linkRef: Screens.EXPLORER
     },
     {
         imgSource: "./imagenes/maletin.png",
-        linkRef: ""
+        linkRef: Screens.JOBS
     },
     {
         imgSource: "./imagenes/campana.png",
-        linkRef: ""
+        linkRef: Screens.NOTIFICATIONS
     },
     {
         imgSource: "./imagenes/usuario.png",
-        linkRef: ""
+        linkRef: Screens.RESET_PASWORD
     }
 ];

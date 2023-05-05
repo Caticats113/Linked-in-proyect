@@ -38,7 +38,7 @@ export enum NavigationActions {
 }
 
 export interface NavigateAction {
-    action: NavigationActions.NAVIGATE,
+    action: NavigationActions.NAVIGATE | String,
     payload: Screens,
 }
 

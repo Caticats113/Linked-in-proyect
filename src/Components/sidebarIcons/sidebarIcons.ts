@@ -1,5 +1,8 @@
 import { barData } from "../../mocks/getData";
+import { dispatch } from "../../store";
+import { navigate } from "../../store/actions";
 import { BarData } from "../../types/barData";
+import { Screens } from "../../types/store";
 
 export default class sidebarIcon extends HTMLElement{
     constructor(){
@@ -23,7 +26,9 @@ export default class sidebarIcon extends HTMLElement{
         barData.map ((e:BarData)=> {
             const barIcon = this.ownerDocument.createElement('img');
             barIcon.setAttribute('src',`${e.imgSource}`);
-            barIcon.setAttribute('href',`${e.linkRef}`);
+            barIcon.addEventListener("click", ()=>{
+                dispatch(navigate(e.linkRef))
+            })
 
             const linkPage = this.ownerDocument.createElement('a');
             linkPage.appendChild(barIcon);
