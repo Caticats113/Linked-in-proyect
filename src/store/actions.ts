@@ -2,7 +2,7 @@ import { AddCardAction, GetCardAction, CardActions } from '../types/store';
 import data from '../services/data'
 
 
-export const getTrips = async (): Promise<GetCardAction> => {
+export const getData = async (): Promise<GetCardAction> => {
     const trips = await data.get();
     return {
         action: CardActions.GET,

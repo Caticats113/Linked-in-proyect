@@ -1,7 +1,9 @@
 import { datas } from "../../mocks/getData";
 import { Data } from "../../types/data";
 import Card, { Attributes } from "../../Components/card/card";
+import { getData } from "../../store/actions";
 import { addObserver, appState, dispatch } from "../../store/index";
+
 
 class Dashboard extends HTMLElement {
     datass: Card[] = [];
@@ -23,9 +25,15 @@ class Dashboard extends HTMLElement {
 
     }
 
-    connectedCallback() {
-        this.render()
-    }
+    async connectedCallback() {
+        if (appState.data.length === 0) {
+          const action = await getData();
+          dispatch(action);
+        } else {
+          this.render();
+        }
+      }
+
 
     render() {
         if (this.shadowRoot) this.shadowRoot.innerHTML = `
@@ -48,6 +56,11 @@ class Dashboard extends HTMLElement {
             card.appendChild(this.datass[index]);
         }
         section.appendChild(card);
+
+        // appState.data.forEach((data, i) => {
+        //     const card = this.ownerDocument.createElement("app-card");
+
+        //   });
 
         this.shadowRoot?.appendChild(section);
     }
