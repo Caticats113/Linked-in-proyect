@@ -46,10 +46,6 @@ export default class Card extends HTMLElement {
 
     render() {
 
-        // const name=this.ownerDocument.createElement('h3');
-        // name.textContent=appState.username;
-
-        // this.shadowRoot?.appendChild(name);
         if (this.shadowRoot) this.shadowRoot.innerHTML = `<div class="post">
 
         <div class="userPost">
