@@ -53,22 +53,22 @@ export const dataR: DataR[] = [
 export const barData: BarData[] = [
     {
         imgSource: "./imagenes/hogar.png",
-        linkRef: ""
+        linkRef: "Screens.LOGIN"
     },
     {
         imgSource: "./imagenes/globo.png",
-        linkRef: ""
+        linkRef: "Screens.SIGNUP"
     },
     {
         imgSource: "./imagenes/maletin.png",
-        linkRef: ""
+        linkRef: "Screens.DASHBOARD"
     },
     {
         imgSource: "./imagenes/campana.png",
-        linkRef: ""
+        linkRef: "Screens.RESETPASSWORD"
     },
     {
         imgSource: "./imagenes/usuario.png",
-        linkRef: ""
+        linkRef: "Screens.RESET"
     }
 ];
