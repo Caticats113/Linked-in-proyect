@@ -1,8 +1,8 @@
-import { Data } from "../types/data";
-import { DataR } from "../types/dataR";
-import { BarData } from "../types/barData";
+import { Data } from "../types/store";
+import { DataR } from "../types/store";
+import { BarData } from "../types/store";
 
-export const datas: Data[] = [
+export const datasI: Data[] = [
     {
         username: "Universidad Icesi",
         userpfp: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqrArH4hofnrsMENI9rR9It6xc59aoMDzTRw&usqp=CAU",
@@ -35,7 +35,7 @@ export const datas: Data[] = [
     }
 ];
 
-export const dataR: DataR[] = [
+export const dataRI: DataR[] = [
     {
         userpfp: "../../dist/imagenes/dian.png",
         username: "DIAN"
@@ -50,7 +50,7 @@ export const dataR: DataR[] = [
     }
 ];
 
-export const barData: BarData[] = [
+export const barDataI: BarData[] = [
     {
         imgSource: "./imagenes/hogar.png",
         linkRef: ""

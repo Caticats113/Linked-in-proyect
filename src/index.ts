@@ -1,10 +1,16 @@
 import "./Components/export"
 import "./screens/dashboard/dashboard"
+import { navigate } from "./store/actions";
+import { addObserver, appState, dispatch } from "./store/index";
+import { Screens } from "./types/store";
+
 
 class AppContainer extends HTMLElement{
     constructor(){
         super();
         this.attachShadow({mode:"open"})
+
+        addObserver(this);
     }
 
     connectedCallback(){
