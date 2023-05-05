@@ -1,11 +1,8 @@
 import { datas } from "../../mocks/getData";
 import { Data } from "../../types/data";
 import Card, { Attributes } from "../../Components/card/card";
-import { getData } from "../../store/actions";
-import { addObserver, appState, dispatch } from "../../store/index";
 
-
-class Dashboard extends HTMLElement {
+export default class Dashboard extends HTMLElement {
     datass: Card[] = [];
     constructor() {
         super();
@@ -26,43 +23,36 @@ class Dashboard extends HTMLElement {
     }
 
     async connectedCallback() {
-        if (appState.data.length === 0) {
-            const action = await getData();
-            dispatch(action);
-            this.render()
-        } else {
             this.render();
-        }
     }
 
     render() {
         if (this.shadowRoot) this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="./index.css">
-        <link rel="stylesheet" href="../src/screens/dashboard/dashboard.css">
-        `;
-
-        const section = this.ownerDocument.createElement("section")
-        section.setAttribute("id", "app-dashboard")
+        <link rel="stylesheet" href="../src/screens/dashboard/dashboard.css">`;
+        //sidebar
+        const sideBar = this.ownerDocument.createElement('sidebar-icon');
+        this.shadowRoot?.appendChild(sideBar);
+        //main Dashboard
+        const mainDashboard = this.ownerDocument.createElement("section")
+        mainDashboard.setAttribute("id", "app-dashboard")
 
         const nav = this.ownerDocument.createElement('app-nav');
-        section.appendChild(nav);
+        mainDashboard.appendChild(nav);
 
         const createPost = this.ownerDocument.createElement('create-post');
-        section.appendChild(createPost);
+        mainDashboard.appendChild(createPost);
 
         const card = this.ownerDocument.createElement("section")
         card.className = "card";
         for (let index = 0; index < this.datass.length; index++) {
             card.appendChild(this.datass[index]);
         }
-        section.appendChild(card);
+        mainDashboard.appendChild(card);
 
-        // appState.data.forEach((data, i) => {
-        //     const card = this.ownerDocument.createElement("app-card");
-
-        //   });
-
-        this.shadowRoot?.appendChild(section);
+        this.shadowRoot?.appendChild(mainDashboard);
+        //recoms
+        const followRecoms = this.ownerDocument.createElement('follow-recoms');
+        this.shadowRoot?.appendChild(followRecoms);
     }
 }
 

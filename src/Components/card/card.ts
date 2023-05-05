@@ -1,5 +1,4 @@
 import styles from "./card.css";
-import {appState} from "../../store/index"; //Import the store
 
 export enum Attributes {
     "username" = "username",
