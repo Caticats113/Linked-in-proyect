@@ -1,4 +1,4 @@
-import { AddCardAction, GetCardAction, CardActions, RecomsActions, AddRecomsAction, GetRecomsAction } from '../types/store';
+import { AddCardAction, GetCardAction, CardActions, RecomsActions, AddRecomsAction, GetRecomsAction,NavigateAction, NavigationActions, Screens } from '../types/store';
 import data from '../services/data'
 import dataR from '../services/dataR';
 
@@ -30,5 +30,12 @@ export const addNewData = ({payload}: Pick<AddCardAction, "payload">): AddCardAc
     return {
         action: CardActions.ADD,
         payload
+    }
+}
+
+export const navigate = (screen: Screens): NavigateAction => {
+    return {
+        action: NavigationActions.NAVIGATE,
+        payload: screen
     }
 }

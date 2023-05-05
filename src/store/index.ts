@@ -1,5 +1,5 @@
 import Storage, {PersistanceKeys} from "../utils/storage";
-import { Actions, AppState, Observed } from "../types/store";
+import { Actions, AppState, Observed, Screens } from "../types/store";
 import { reducer } from "./reducer";
 
 const emptyState:AppState = { // Create the appState and we export it
@@ -8,6 +8,7 @@ const emptyState:AppState = { // Create the appState and we export it
     // posttext:"",
     // postimage:"",
 
+    screen: Screens.LOGIN,
     data: [],
     datar:[],
 };
