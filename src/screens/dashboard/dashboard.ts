@@ -14,13 +14,11 @@ export default class Dashboard extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-
-
     }
 
     async connectedCallback() {
-       const datass = await data.get();
-       datass?.forEach((e: Data) => {
+      const datass = await data.get();
+      datass?.forEach((e: Data) => {
         const prof = this.ownerDocument.createElement(
             "app-card"
         ) as Card;

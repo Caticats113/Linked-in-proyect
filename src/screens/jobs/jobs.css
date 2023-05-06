@@ -1,0 +1,38 @@
+:host{
+    display: flex;
+    flex-direction: row;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    align-items: start;
+    padding: 3%;
+    padding-left: 1%;
+    background-color:white;
+    border-radius: 30px;
+    height: fit-content;
+    margin: 13% 3%;
+    gap: 10px;
+}
+
+button{
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 15px;
+    border-radius: 500px;
+    width: max-content;
+    background-color: rgba(255, 255, 255, 0.47);
+    border-color:#1E1E1E;
+    color: #1E1E1E;
+    border-style:solid;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px){
+    :host{
+        margin-left: 0;
+        width: 100%;
+    }
+}
