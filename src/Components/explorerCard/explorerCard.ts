@@ -13,7 +13,7 @@ export default class ExplorerCard extends HTMLElement{
 
         render(){
 
-            if(this.shadowRoot)this.shadowRoot.innerHTML=' <img class="pf" src="${this.userpfp}">';
+//            if(this.shadowRoot)this.shadowRoot.innerHTML=`<img class="pf" src=${this.userpfp}>`;
 
             const name=this.ownerDocument.createElement('h3');
             this.textContent="User name";

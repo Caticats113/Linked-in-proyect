@@ -3,4 +3,5 @@ export interface Data{
     userpfp: string;
     posttext: string;
     postimage: string;
+    jobtext: string;
 }

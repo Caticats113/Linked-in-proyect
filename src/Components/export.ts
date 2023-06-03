@@ -8,3 +8,4 @@ export {default as LogCard} from "./logCard/logCard";
 export {default as Reset} from "./reset/reset";
 export {default as ResetPassword} from "./resetPassword/resetPassword";
 export {default as SignCard} from "./signCard/signCard";
+export { default as JobCard } from "./jobCard/jobCard"
