@@ -1,16 +1,16 @@
 import Storage, {PersistanceKeys} from "../utils/storage";
 import { Actions, AppState, Observed, Screens } from "../types/store";
 import { reducer } from "./reducer";
+import { onAuthStateChanged } from "firebase/auth";
+import { setUserCredentials } from "./actions";
+import { Auth } from "firebase/auth";
 
-const emptyState:AppState = { // Create the appState and we export it
-    // username:"", //We put here the elements of our component
-    // userpfp:"",
-    // posttext:"",
-    // postimage:"",
 
+const emptyState:AppState = {
     screen: Screens.LOGIN,
     data: [],
     datar:[],
+    user:"",
 };
 
 export let appState = Storage.get<AppState>({

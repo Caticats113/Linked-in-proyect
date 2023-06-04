@@ -1,17 +1,34 @@
-import { dispatch } from "../../store";
+import { onAuthStateChanged } from "firebase/auth";
+import { addObserver, appState, dispatch } from "../../store";
 import { navigate } from "../../store/actions";
 import { Screens } from "../../types/store";
+import Firebase from "../../utils/firebase";
+
+
+const credentials ={
+    email:"",
+    password:""};
 
 export default class LogCard extends HTMLElement {
 
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-    }
+        addObserver(this);
+
+        }
 
     connectedCallback() {
         this.render()
+        console.log('AppState',appState.user);
     }
+
+    async handleLoginButton(){
+        Firebase.loginUser(credentials);
+        console.log(appState.user);
+        dispatch(navigate(Screens.DASHBOARD));
+    }
+
 
     render() {
         if (this.shadowRoot) this.shadowRoot.innerHTML = `
@@ -21,15 +38,24 @@ export default class LogCard extends HTMLElement {
         login.textContent = "Log in";
         this.shadowRoot?.appendChild(login);
 
+
         const email = this.ownerDocument.createElement('input');
-        email.textContent = "Email";
-        email.setAttribute("placeholder", "Email")
+        email.placeholder = "Email";
+        email.type="email";
+        email.addEventListener(
+            "change",
+            (e:any)=>(credentials.email=e.target.value)
+        );
+
         this.shadowRoot?.appendChild(email);
 
         const password = this.ownerDocument.createElement('input');
-        password.textContent = "Password";
-        password.setAttribute("type", "password")
-        password.setAttribute("placeholder", "Password")
+        password.placeholder = "Password";
+        password.type="password";
+        password.addEventListener(
+            "change",
+            (e:any)=>(credentials.password=e.target.value)
+        );
         this.shadowRoot?.appendChild(password);
 
         const forgetPassword = this.ownerDocument.createElement('h3')
@@ -42,9 +68,7 @@ export default class LogCard extends HTMLElement {
 
         const logButton = this.ownerDocument.createElement('button');
         logButton.textContent = "Log In";
-        logButton.addEventListener("click", ()=>{
-            dispatch(navigate(Screens.DASHBOARD))
-        })
+        logButton.addEventListener("click",this.handleLoginButton);
         this.shadowRoot?.appendChild(logButton);
     }
 

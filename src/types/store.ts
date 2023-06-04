@@ -12,12 +12,19 @@ export enum Screens {
     NOTIFICATIONS = "NOTIFICATIONS",
     RESET_PASWORD = "RESET_PASWORD",
     RESET = "RESET"
+
+
 }
 
     export type AppState ={
         screen: Screens;
         data: Data[],
         datar: DataR[]
+        user:string;
+    }
+
+    export enum UserActions{
+        "SET_USER"="SET_USER"
     }
 
     export enum RecomsActions{
@@ -65,4 +72,9 @@ export interface NavigateAction {
         payload: Screens,
     }
 
-export type Actions = AddCardAction| GetCardAction | AddRecomsAction | GetRecomsAction|NavigateAction;
+    export interface SetUser{
+        action: UserActions.SET_USER;
+        payload: string;
+    }
+
+export type Actions = AddCardAction| GetCardAction | AddRecomsAction | GetRecomsAction|NavigateAction|SetUser;
