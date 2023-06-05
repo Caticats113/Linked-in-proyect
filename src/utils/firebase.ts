@@ -5,12 +5,13 @@ import { navigate, setUserCredentials } from "../store/actions";
 import { Screens } from "../types/store";
 import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,
     setPersistence, browserSessionPersistence  } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 
 
 
 const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
+export const auth = getAuth(app);
 
 const registerUser=async({
     email,
@@ -54,21 +55,11 @@ const registerUser=async({
         };
 
 
-    onAuthStateChanged(auth, (user) => {
-        console.log('get in');
-        console.log('user',user)
-        if (user) {
-        user.email !== null? dispatch(setUserCredentials(user.email)):'';
-        dispatch(navigate(Screens.LOGIN));
-        } else {
-            dispatch(navigate(Screens.DASHBOARD));
-        }
-      });
 
     export default{
         registerUser,
         loginUser,
-        onAuthStateChanged,
+
 
     }
 

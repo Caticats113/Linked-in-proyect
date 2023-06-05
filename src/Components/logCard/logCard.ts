@@ -26,7 +26,6 @@ export default class LogCard extends HTMLElement {
     async handleLoginButton(){
         Firebase.loginUser(credentials);
         console.log(appState.user);
-        dispatch(navigate(Screens.DASHBOARD));
     }
 
 
