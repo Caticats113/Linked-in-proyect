@@ -1,35 +1,85 @@
-import styles from "./explorerCard.css"
-export default class ExplorerCard extends HTMLElement{
+import styles from "./explorerCard.css";
 
-    constructor(){
-            super();
-            this.attachShadow({mode:"open"})
-        }
+export enum Attributes {
+    "userbanner" = "userbanner",
+    "username" = "username",
+    "userpfp" = "userpfp",
+    "description" = "description",
+}
 
-        connectedCallback(){
+export default class ExplorerCard extends HTMLElement {
 
-            this.render()
-        }
+    userbanner?: string;
+    username?: string;
+    userpfp?: string;
+    description?: string;
 
-        render(){
-
-//            if(this.shadowRoot)this.shadowRoot.innerHTML=`<img class="pf" src=${this.userpfp}>`;
-
-            const name=this.ownerDocument.createElement('h3');
-            this.textContent="User name";
-            this.shadowRoot?.appendChild(name);
-
-            const userinfo=this.ownerDocument.createElement('p');
-            this.textContent="";
-            this.shadowRoot?.appendChild(userinfo);
-
-
-            const followButton=this.ownerDocument.createElement('button');
-            this.innerHTML="Seguir";
-            this.shadowRoot?.appendChild(followButton);
-
-
-        }
-
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
     }
-    customElements.define('explorer-card',ExplorerCard);
+
+    static get observedAttributes() {
+        const attrs: Record<Attributes, null> = {
+            userbanner: null,
+            username: null,
+            userpfp: null,
+            description: null,
+        }
+        return Object.keys(attrs);
+    }
+
+    connectedCallback() {
+        this.render()
+    }
+
+    attributeChangedCallback(propName: Attributes, _: string | undefined, newValue: string | undefined) {
+        switch (propName) {
+            default:
+                this[propName] = newValue;
+                break;
+        }
+
+        this.render();
+    }
+
+    render() {
+
+        if (this.shadowRoot) this.shadowRoot.innerHTML = ""
+
+        const card = this.ownerDocument.createElement('div');
+        card.setAttribute("class", "card");
+        card.style.backgroundImage = `url(${this.userbanner})`
+
+        const userPost = this.ownerDocument.createElement('div');
+        userPost.setAttribute("class", "userPost");
+
+        // const banner = this.ownerDocument.createElement('img');
+        // banner.setAttribute("src", `${this.userbanner}`);
+        // banner.setAttribute("class", "banner");
+        // userPost.appendChild(banner);
+
+        const pf = this.ownerDocument.createElement('img');
+        pf.setAttribute("src", `${this.userpfp}`);
+        pf.setAttribute("class", "pf");
+        userPost.appendChild(pf);
+
+        card.appendChild(userPost);
+
+        const userName = this.ownerDocument.createElement('h3');
+        userName.innerText = `${this.username}`;
+        card.appendChild(userName);
+
+        const description = this.ownerDocument.createElement('p');
+        description.innerText = `${this.description}`;
+        card.appendChild(description);
+
+        this.shadowRoot?.appendChild(card);
+
+        const css = this.ownerDocument.createElement("style");
+        css.innerHTML = styles;
+        this.shadowRoot?.appendChild(css);
+    }
+
+}
+customElements.define('explorer-card', ExplorerCard);

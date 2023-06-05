@@ -1,0 +1,11 @@
+:host{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3%;
+}
+
+.pf{
+    width: 15%;
+    border-radius: 100%;
+}
