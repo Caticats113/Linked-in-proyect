@@ -1,0 +1,19 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    align-items: start;
+    padding: 3%;
+    padding-left: 1%;
+    background-color:white;
+    border-radius: 30px;
+    height: fit-content;
+    margin: 13% 3%;
+    margin-left: 0;
+}
+
+@media (max-width: 900px){
+    :host{
+        display: none;
+    }
+}

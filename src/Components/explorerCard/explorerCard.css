@@ -1,0 +1,58 @@
+:host{
+    width: 32%;
+}
+
+.userPost{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.pf{
+    width: 30%;
+    border-radius: 100%;
+    margin-bottom: -5%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.post{
+    padding: 5%;
+    background-color: white;
+    border-radius: 30px;
+    border-width: 0;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: lightgrey;
+}
+
+    button{
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 15px;
+    border-radius: 500px;
+    width: max-content;
+    background-color: rgba(255, 255, 255, 0.47);
+    border-color:#1E1E1E;
+    color: #1E1E1E;
+    border-style:solid;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.card{
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgrey;
+    padding: 5%;
+    background-position: top;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    height: 90%;
+}
+
+@media (max-width: 900px){
+    :host{
+        width: 100%;
+    }
+}
