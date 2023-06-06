@@ -14,7 +14,7 @@ export default class Jobs extends HTMLElement {
 
     async connectedCallback() {
         const datass = await data.get();
-        datass?.forEach((e: Data) => {
+        datass?.forEach((e: Omit<Data, "id">) => {
             const prof = this.ownerDocument.createElement(
                 "job-card"
             ) as JobCard;
@@ -26,7 +26,7 @@ export default class Jobs extends HTMLElement {
         });
 
         if (appState.data.length === 0) {
-            const action = await getData();
+            const action = await data.get();
 
         } else {
             this.render();

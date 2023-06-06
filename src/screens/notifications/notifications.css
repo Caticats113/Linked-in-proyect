@@ -29,4 +29,10 @@ notification-card{
         margin-left: 0;
         width: 100%;
     }
+
+    #app-dashboard{
+        margin: auto;
+        width: 90%;
+    }
+
 }

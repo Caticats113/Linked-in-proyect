@@ -1,12 +1,12 @@
 import { datas } from "../../mocks/getData";
 import { Data } from "../../types/data";
 import data from "../../services/data";
-import Notification, { Attributes } from "../../Components/notification/notification";
+import NotiCard, { Attributes } from "../../Components/notification/notification";
 import { getData, getDataR } from "../../store/actions";
 import { addObserver, appState, dispatch } from "../../store/index";
 
 export default class Notifications extends HTMLElement {
-    datass: Notification[] = [];
+    datass: NotiCard[] = [];
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -14,10 +14,10 @@ export default class Notifications extends HTMLElement {
 
     async connectedCallback() {
         const datass = await data.get();
-        datass?.forEach((e: Data) => {
+        datass?.forEach((e: Omit<Data, "id">) => {
             const prof = this.ownerDocument.createElement(
                 "notification-card"
-            ) as Notification;
+            ) as NotiCard;
             prof.setAttribute(Attributes.username, e.username);
             prof.setAttribute(Attributes.userpfp, e.userpfp);
 
@@ -25,8 +25,7 @@ export default class Notifications extends HTMLElement {
         });
 
         if (appState.data.length === 0) {
-            const action = await getData();
-
+            const action = await data.get();
         } else {
             this.render();
         }

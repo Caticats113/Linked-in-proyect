@@ -1,4 +1,3 @@
-
 .buscador{
     display: flex;
     flex-direction: row;
@@ -26,5 +25,7 @@
 @media (max-width: 900px){
     #navv{
         padding: 15px;
+        width: 100%;
     }
+
 }

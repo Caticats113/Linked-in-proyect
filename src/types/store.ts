@@ -18,6 +18,11 @@ export enum Screens {
         screen: Screens;
         data: Data[],
         datar: DataR[]
+        user:{};
+    }
+
+    export enum UserActions{
+        "SET_USER"="SET_USER"
     }
 
     export enum RecomsActions{
@@ -48,7 +53,7 @@ export interface NavigateAction {
 
     export interface AddCardAction{
         action: CardActions.ADD,
-        payload:Data,
+        payload: Data,
     }
 
     export interface GetCardAction{
@@ -65,4 +70,9 @@ export interface NavigateAction {
         payload: Screens,
     }
 
-export type Actions = AddCardAction| GetCardAction | AddRecomsAction | GetRecomsAction|NavigateAction;
+    export interface SetUser{
+        action: UserActions.SET_USER;
+        payload: string;
+    }
+
+export type Actions = AddCardAction| GetCardAction | AddRecomsAction | GetRecomsAction|NavigateAction|SetUser;

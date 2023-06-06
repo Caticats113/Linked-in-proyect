@@ -1,4 +1,7 @@
-import { Actions,AppState,CardActions,RecomsActions,NavigationActions } from "../types/store";
+import { appState } from ".";
+import { Actions,AppState,CardActions,RecomsActions,NavigationActions, UserActions } from "../types/store";
+import Firebase from "../utils/firebase";
+import { Screens } from "../types/store";
 
 export const reducer = (currentAction: Actions, currentState: AppState): AppState => {
     const { action, payload } = currentAction;
@@ -11,7 +14,6 @@ switch(action){
             data:[
                 payload,
                 ...currentState.data,
-
             ]
         }
     case RecomsActions.GET:
@@ -26,7 +28,6 @@ switch(action){
                 datar:[
                     payload,
                     ...currentState.data,
-
                 ]
             }
         case CardActions.GET:
@@ -41,8 +42,12 @@ switch(action){
                 screen: payload,
             }
 
+            case UserActions.SET_USER:
+                appState.user = payload;
+                return appState
+
             defeault:
-            return clone;
+            return appState;
 
     }
 }

@@ -5,7 +5,7 @@ export enum Attributes {
     "userpfp" = "userpfp",
 }
 
-export default class Notification extends HTMLElement {
+export default class NotiCard extends HTMLElement {
 
     username?: string;
     userpfp?: string;
@@ -56,4 +56,4 @@ export default class Notification extends HTMLElement {
     }
 
 }
-customElements.define('notification-card', Notification);
+customElements.define('notification-card', NotiCard);

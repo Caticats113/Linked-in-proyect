@@ -6,3 +6,4 @@ export {default as Reset } from "./reset/reset";
 export {default as ResetPassword } from "./resetPassword/resetPassword";
 export {default as SignUp } from "./signUp/signUp";
 export {default as Dashboard } from "./dashboard/dashboard";
+export {default as Notification } from "./notifications/notifications"

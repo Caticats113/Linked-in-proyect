@@ -1,6 +1,14 @@
-import { AddCardAction, GetCardAction, CardActions, RecomsActions, AddRecomsAction, GetRecomsAction,NavigateAction, NavigationActions, Screens } from '../types/store';
-import data from '../services/data'
+import { AddCardAction, GetCardAction, CardActions, RecomsActions, AddRecomsAction,
+    GetRecomsAction,NavigateAction, NavigationActions, Screens,UserActions } from '../types/store';
+import data from '../services/data';
 import dataR from '../services/dataR';
+
+export const setUserCredentials=(user:string)=>{
+    return{
+        action:UserActions.SET_USER,
+        payload:user,
+    }
+}
 
 export const getDataR = async (): Promise<GetRecomsAction> => {
     const datae = await dataR.get();
@@ -26,7 +34,8 @@ export const getData = async (): Promise<GetCardAction> => {
     }
 }
 
-export const addNewData = ({payload}: Pick<AddCardAction, "payload">): AddCardAction => {
+export const addNewData = async ({payload}: Pick<AddCardAction, "payload">): Promise<AddCardAction> => {
+    // const newDatai = await data.add(payload)
     return {
         action: CardActions.ADD,
         payload
@@ -39,3 +48,4 @@ export const navigate = (screen: Screens): NavigateAction => {
         payload: screen
     }
 }
+

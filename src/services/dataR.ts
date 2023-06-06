@@ -1,13 +1,19 @@
 import { dataR } from "../mocks/getData";
 import { DataR } from "../types/dataR";
+import Firebase from "../utils/firebase";
 
 class Datar {
-    async get(): Promise<DataR[]>{
+    async get(): Promise<DataR[]> {
         console.log("Pere ta cargando");
-        const value: DataR[]= await new Promise((resolve) => {
-            setTimeout(()=>resolve(dataR),3000);
-        });
-        return value;
+        try {
+            const value = await Firebase.getDatar();
+            console.log(value);
+            return value;
+
+        } catch (error) {
+            console.error("ayuda socorro", error)
+            return []
+        }
     }
 }
 

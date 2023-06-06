@@ -49,4 +49,15 @@ button{
         margin-left: 0;
         width: 100%;
     }
+
+    #app-dashboard{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 90%;
+    }
+
+    aside{
+        display: none;
+    }
 }

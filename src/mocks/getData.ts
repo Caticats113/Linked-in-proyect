@@ -3,49 +3,49 @@ import { DataR } from "../types/dataR";
 import { BarData } from "../types/barData";
 import { Screens } from "../types/store";
 
-export const datas: Data[] = [
+export const datas: Omit<Data, "id">[] = [
     {
-        userbanner:"https://media.licdn.com/dms/image/D4E3DAQG7ZlhGQPm6nA/image-scale_191_1128/0/1677862542590?e=1686600000&v=beta&t=NkZj5nDI_2oZXId8RPDrh45f7ZzihCXDi6dW3inIJ0M",
+        userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20icesi.jpg?alt=media&token=7199c90e-4f11-421f-84fc-29ed288b883b&_gl=1*h4coaa*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMjAwMTguMC4wLjA.",
         username: "Universidad Icesi",
-        userpfp: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqrArH4hofnrsMENI9rR9It6xc59aoMDzTRw&usqp=CAU",
-        posttext: "#HoyEnIcesi Icecomex invita hoy a las 5:00 p.m., al foro ¿Cómo aperturar mercados internacionales efectivamente?, que tendrá como invitado especial a John Edinson Jiménez, jefe de Exportaciones y Dirección de Negocios Internacionales en Lubristone, quien hablará de la experiencia, los aciertos y desaciertos que han tenido en la apertura de nuevos mercados y la forma en la que han logrado un relacionamiento a largo plazo con sus aliados en el exterior. Conéctate aquí https://lnkd.in/eUVuht9w",
-        postimage: "https://media.licdn.com/dms/image/D4E22AQG3F1QEGGthAQ/feedshare-shrink_800/0/1682520526765?e=1685577600&v=beta&t=onEH8tFrOYoecODyW7Ob6-RLzLKtU1yz-NYn3w_HwoE",
+        userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/icesi%20perfil.png?alt=media&token=a47180de-80e8-4994-9d5a-c5b1ee79dcfb&_gl=1*1v4ri21*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc5MzQuMC4wLjA.",
+        posttext: '🎯 Invitamos a nuestra comunidad a aplicar a la vacante "Profesor tiempo completo en Inteligencia Artificial"',
+        postimage: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/postIcesi.jpeg?alt=media&token=cab3c0ec-fb22-45a9-81fc-8f052ba00c43&_gl=1*tw4uak*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTg5NDcuMC4wLjA.",
         jobtext: "Profesor para materias de Ingeniería",
         description: "Primera Universidad privada del Suroccidente Colombiano con Acreditación Institucional de Alta Calidad.",
     },
     {
-        userbanner:"https://media.licdn.com/dms/image/D4E3DAQFd6p21KmpDnQ/image-scale_191_1128/0/1681936495723?e=1686546000&v=beta&t=9SvUINb97VGEb21uEtdk_epM9nDWOu4qFTTe09W8p0U",
+        userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20epson.jpg?alt=media&token=e8d15615-99f2-4ba5-919c-dab8e5795a52&_gl=1*1i26o9m*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMjAwMDIuMC4wLjA.",
         username: "Epson LatinoAmerica",
-        userpfp: "https://yt3.googleusercontent.com/ytc/AL5GRJUpjbYn2nRTs6pKoZsmN1wr8vu1KtvcA1_xsPqW9w=s900-c-k-c0x00ffffff-no-rj",
-        posttext: "Los resultados de nuestra última encuesta de cambio climático sólo nos alienta y reafirma nuestra dirección. El 63% de las personas estarían listas para no adherir a marcas que no son sustentables en su lucha contra el cambio climático. Sigamos trabajando juntos por nuestro planeta.",
-        postimage: "https://media.licdn.com/dms/image/D4E10AQFaCKSbDB0phg/image-shrink_1280/0/1681501000060?e=1683925200&v=beta&t=S39EkckMacAqRBpqnCZDjsBK9BODlJa_8hhmXc2PhDY",
+        userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/epson%20perfil.jpg?alt=media&token=946452be-e27f-4ba4-8b33-677dcab39aab&_gl=1*po2egp*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc4MzQuMC4wLjA.",
+        posttext: "🌎En el Día Del Medioambiente, dejamos nuestra huella verde. ¿Cómo aportas para cuidar nuestra Tierra?🌳 Déjanos saber con el hashtag #MakeTheSwitch El cambio empieza por nosotros.",
+        postimage: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/postEpson.jpeg?alt=media&token=675b3a3d-3554-457f-9f51-0d12c99cc757&_gl=1*fm0xwu*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTg4MzcuMC4wLjA.",
         jobtext: "Servicio de atención al cliente",
         description: "Fabricante, líder en impresión, proyección, imagen profesional, escáners, dispositivos y tecnología robótica",
     },
     {
-        userbanner:"https://media.licdn.com/dms/image/D4D3DAQEvmev2BXqpjg/image-scale_191_1128/0/1668382347778?e=1686600000&v=beta&t=Ors9sFW6DMB9Bx-uVmZx2pHNX4c35MsOjoQVo7wCZd8",
+        userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20miu.jpg?alt=media&token=5dd6cc8c-b982-409e-9113-3620e10720cb&_gl=1*1l2zrgi*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTk5ODIuMC4wLjA.",
         username: "MIU City University Miami",
-        userpfp: "https://media.licdn.com/dms/image/C4D0BAQEMPn6fmWMXSg/company-logo_200_200/0/1667926786276?e=1690416000&v=beta&t=Mu9fj_9yAQeFUELCkkpKGkwnbcHHkolqgmo9VU2ynhQ",
+        userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/logo-bancolombia.jpg?alt=media&token=df99d69c-5e04-4cad-a5a2-a426fe100c6b&_gl=1*tpeyw0*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc5NjAuMC4wLjA.",
         posttext: "Continuamos con el ciclo de ponencias enfocadas a la empleabilidad de la mano del Dr. Pablo Cardona. En esta ocasión descubriremos cuáles son las habilidades y competencias que debe tener un buen líder en la actualidad.",
-        postimage: "https://media.licdn.com/dms/image/sync/C4D22AQHHqH8AMjkCNQ/feedshare-shrink_800/0/1667813828778?e=1685577600&v=beta&t=zTNYSpfrUcvvevCkcRzrlatSVduBAFNW8Y4cU53OV1A",
+        postimage: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/PostMiu.jpeg?alt=media&token=b25ed8ee-4596-4e72-9c04-083ffe107cc9&_gl=1*1r5ufhw*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTg4NzAuMC4wLjA.",
         jobtext: "Professor for science classes",
         description: "A University for the Real World.",
     },
     {
-        userbanner:"https://media.licdn.com/dms/image/C561BAQHzH8jFIRZ2dw/company-background_10000/0/1625166852764?e=1686600000&v=beta&t=ZITk9R_fo0OuXiISdNMQI4fZHVpdwKhRh6DNH2QM1Xc",
+        userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20suse.jpg?alt=media&token=46222084-483f-4148-a5bf-b9ac7ca80e7f&_gl=1*ukqd4u*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTk5MzguMC4wLjA.",
         username: "SUSE",
-        userpfp: "https://www.ecured.cu/images/f/f0/Suse.png",
-        posttext: "We are excited to officially welcome Dirk-Peter van Leeuwen (DP) on his first day as our new CEO. He’s an engineer at heart and a veteran of the enterprise #opensource software industry, having built and led businesses around the world.",
-        postimage: "https://media.licdn.com/dms/image/sync/D4E10AQFedS3GCJWdTg/image-shrink_800/0/1682923807806?e=1683925200&v=beta&t=ZjFNrxQDaHNx1DIq5QqUPA2I59gM_wU7WOb3pgJSdm4",
+        userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/suse%20perfil.png?alt=media&token=01e683cf-c04e-4aa6-ba8f-bc1fa41423ab&_gl=1*84z2h4*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc5OTkuMC4wLjA.",
+        posttext: "Did you register for our NeuVector Container Security Rodeo? Join us TOMORROW, Tuesday, June 6, and learn about the only 100% #opensource, #ZeroTrust container security platform, during this hands-on workshop. ➡ Register now: https://okt.to/TOfwMv",
+        postimage: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/postSuse.jpeg?alt=media&token=f2f28c5a-95eb-4533-a6f8-9757ad202920&_gl=1*1pciufc*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTg4MjAuMC4wLjA.",
         jobtext: "Seguridad de redes y sistemas informáticos",
         description: "Our goal is to empower secure innovation everywhere. We are driven by the power of many.",
     },
     {
-        userbanner:"https://media.licdn.com/dms/image/D563DAQG68aD7W0JUSg/image-scale_191_1128/0/1685635899075?e=1686600000&v=beta&t=DTnh7X-1Zs0PvORbgDbB_qmtBvEadqn1CjOjWO0XB7M",
+        userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20deel.jpg?alt=media&token=7013da10-686b-495f-9a07-30c775544b7a&_gl=1*1d9grg0*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTk5MDcuMC4wLjA.",
         username: "Deel",
-        userpfp: "https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/3dbec57c-8f53-4fc0-bfba-242bf48bd3de.png?w=90&h=90&fit=max&dpr=3&auto=format&q=50",
-        posttext: "Este jueves 20 y viernes 21 de abril se llevará a cabo esta conferencia que reúne empresarios, inversores e innovadores tecnológicos del mundo y muestra los últimos avances en tecnología.",
-        postimage: "https://media.licdn.com/dms/image/D4D22AQFzPm7QDiN0dg/feedshare-shrink_800/0/1682008285105?e=1685577600&v=beta&t=icXmKypVW9rUIqyYUUbDdwnxGI0-3mMavcunBC2zEgg",
+        userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/dian.png?alt=media&token=1ba32c02-8370-4a6f-89bb-4ae7bee50850&_gl=1*21t4wm*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc4OTYuMC4wLjA.",
+        posttext: "Say goodbye to outdated workflows and hello to our new Deel API Integrations! It’s a faster and more flexible way to connect Deel to your existing tech stack. Connect these 10 tools in just a few clicks and start automating. Sign in to your Deel account and visit the Apps and Integrations store to learn more. ⚙️",
+        postimage: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/postDeel.jpeg?alt=media&token=b8e6d7db-c3f2-49dd-b2bb-71a866113b79&_gl=1*caxyj7*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTg4ODUuMC4wLjA.",
         jobtext: "Senior Talent Acquisition Specialist",
         description: "Bring the world to work",
     }
@@ -53,15 +53,15 @@ export const datas: Data[] = [
 
 export const dataR: DataR[] = [
     {
-        userpfp: "../../dist/imagenes/dian.png",
+        userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/dian.png?alt=media&token=1ba32c02-8370-4a6f-89bb-4ae7bee50850&_gl=1*21t4wm*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc4OTYuMC4wLjA.",
         username: "DIAN"
     },
     {
-        userpfp: "../../dist/imagenes/coomeva.png",
+        userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/coomeva.png?alt=media&token=6893100c-85bc-4ae6-b058-b4268fa9ed56&_gl=1*13sy5f8*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc3NjYuMC4wLjA.",
         username: "Coomeva"
     },
     {
-        userpfp: "../../dist/imagenes/logo-bancolombia.jpg",
+        userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/logo-bancolombia.jpg?alt=media&token=df99d69c-5e04-4cad-a5a2-a426fe100c6b&_gl=1*tpeyw0*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc5NjAuMC4wLjA.",
         username: "Bancolombia"
     }
 ];

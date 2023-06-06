@@ -1,15 +1,30 @@
-import { dispatch } from "../../store";
+import { addObserver, dispatch } from "../../store";
 import { navigate } from "../../store/actions";
 import { Screens } from "../../types/store";
+import firebase from "../../utils/firebase";
+
+const credentials ={
+    email:"",
+    password:""};
 
 export default class SignCard extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
+        addObserver(this);
     }
 
     connectedCallback() {
         this.render()
+    }
+
+    async handleSignUpButton(){
+        const user = await firebase.registerUser(credentials);
+        console.log(user);
+        if(user){
+            dispatch(navigate(Screens.LOGIN))
+            sessionStorage.clear();
+        };
     }
 
     render() {
@@ -21,11 +36,22 @@ export default class SignCard extends HTMLElement {
         this.shadowRoot?.appendChild(signup);
 
         const email = this.ownerDocument.createElement('input');
-        email.innerHTML = "Email";
+        email.placeholder = "Email";
+        email.type="email";
+        email.addEventListener(
+            "change",
+            (e:any)=>(credentials.email=e.target.value)
+        );
+
         this.shadowRoot?.appendChild(email);
 
         const password = this.ownerDocument.createElement('input');
-        password.innerHTML = "Password";
+        password.placeholder = "Password";
+        password.type="password";
+        password.addEventListener(
+            "change",
+            (e:any)=>(credentials.password=e.target.value)
+        );
         this.shadowRoot?.appendChild(password);
 
         const section = this.ownerDocument.createElement("section")
@@ -39,10 +65,10 @@ export default class SignCard extends HTMLElement {
 
         const signButton = this.ownerDocument.createElement('button');
         signButton.innerHTML = "Accept and Join";
-        signButton.addEventListener("click", ()=>{
-            dispatch(navigate(Screens.DASHBOARD))
-        })
+        signButton.addEventListener("click",this.handleSignUpButton);
         this.shadowRoot?.appendChild(signButton);
+
+
     }
 }
 customElements.define('sign-card', SignCard);
