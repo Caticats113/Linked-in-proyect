@@ -5,7 +5,7 @@ import { Screens } from "../types/store";
 
 export const datas: Data[] = [
     {
-        userbanner:"https://media.licdn.com/dms/image/D4E3DAQG7ZlhGQPm6nA/image-scale_191_1128/0/1677862542590?e=1686600000&v=beta&t=NkZj5nDI_2oZXId8RPDrh45f7ZzihCXDi6dW3inIJ0M",
+        userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20icesi.jpg?alt=media&token=7199c90e-4f11-421f-84fc-29ed288b883b&_gl=1*h4coaa*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMjAwMTguMC4wLjA.",
         username: "Universidad Icesi",
         userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/icesi%20perfil.png?alt=media&token=a47180de-80e8-4994-9d5a-c5b1ee79dcfb&_gl=1*1v4ri21*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc5MzQuMC4wLjA.",
         posttext: '🎯 Invitamos a nuestra comunidad a aplicar a la vacante "Profesor tiempo completo en Inteligencia Artificial"',
@@ -14,7 +14,7 @@ export const datas: Data[] = [
         description: "Primera Universidad privada del Suroccidente Colombiano con Acreditación Institucional de Alta Calidad.",
     },
     {
-        userbanner:"https://media.licdn.com/dms/image/D4E3DAQFd6p21KmpDnQ/image-scale_191_1128/0/1681936495723?e=1686546000&v=beta&t=9SvUINb97VGEb21uEtdk_epM9nDWOu4qFTTe09W8p0U",
+        userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20epson.jpg?alt=media&token=e8d15615-99f2-4ba5-919c-dab8e5795a52&_gl=1*1i26o9m*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMjAwMDIuMC4wLjA.",
         username: "Epson LatinoAmerica",
         userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/epson%20perfil.jpg?alt=media&token=946452be-e27f-4ba4-8b33-677dcab39aab&_gl=1*po2egp*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc4MzQuMC4wLjA.",
         posttext: "🌎En el Día Del Medioambiente, dejamos nuestra huella verde. ¿Cómo aportas para cuidar nuestra Tierra?🌳 Déjanos saber con el hashtag #MakeTheSwitch El cambio empieza por nosotros.",
@@ -23,7 +23,7 @@ export const datas: Data[] = [
         description: "Fabricante, líder en impresión, proyección, imagen profesional, escáners, dispositivos y tecnología robótica",
     },
     {
-        userbanner:"https://media.licdn.com/dms/image/D4D3DAQEvmev2BXqpjg/image-scale_191_1128/0/1668382347778?e=1686600000&v=beta&t=Ors9sFW6DMB9Bx-uVmZx2pHNX4c35MsOjoQVo7wCZd8",
+        userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20miu.jpg?alt=media&token=5dd6cc8c-b982-409e-9113-3620e10720cb&_gl=1*1l2zrgi*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTk5ODIuMC4wLjA.",
         username: "MIU City University Miami",
         userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/logo-bancolombia.jpg?alt=media&token=df99d69c-5e04-4cad-a5a2-a426fe100c6b&_gl=1*tpeyw0*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc5NjAuMC4wLjA.",
         posttext: "Continuamos con el ciclo de ponencias enfocadas a la empleabilidad de la mano del Dr. Pablo Cardona. En esta ocasión descubriremos cuáles son las habilidades y competencias que debe tener un buen líder en la actualidad.",
@@ -32,7 +32,7 @@ export const datas: Data[] = [
         description: "A University for the Real World.",
     },
     {
-        userbanner:"https://media.licdn.com/dms/image/C561BAQHzH8jFIRZ2dw/company-background_10000/0/1625166852764?e=1686600000&v=beta&t=ZITk9R_fo0OuXiISdNMQI4fZHVpdwKhRh6DNH2QM1Xc",
+        userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20suse.jpg?alt=media&token=46222084-483f-4148-a5bf-b9ac7ca80e7f&_gl=1*ukqd4u*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTk5MzguMC4wLjA.",
         username: "SUSE",
         userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/suse%20perfil.png?alt=media&token=01e683cf-c04e-4aa6-ba8f-bc1fa41423ab&_gl=1*84z2h4*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc5OTkuMC4wLjA.",
         posttext: "Did you register for our NeuVector Container Security Rodeo? Join us TOMORROW, Tuesday, June 6, and learn about the only 100% #opensource, #ZeroTrust container security platform, during this hands-on workshop. ➡ Register now: https://okt.to/TOfwMv",
@@ -41,7 +41,7 @@ export const datas: Data[] = [
         description: "Our goal is to empower secure innovation everywhere. We are driven by the power of many.",
     },
     {
-        userbanner:"https://media.licdn.com/dms/image/D563DAQG68aD7W0JUSg/image-scale_191_1128/0/1685635899075?e=1686600000&v=beta&t=DTnh7X-1Zs0PvORbgDbB_qmtBvEadqn1CjOjWO0XB7M",
+        userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20deel.jpg?alt=media&token=7013da10-686b-495f-9a07-30c775544b7a&_gl=1*1d9grg0*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTk5MDcuMC4wLjA.",
         username: "Deel",
         userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/dian.png?alt=media&token=1ba32c02-8370-4a6f-89bb-4ae7bee50850&_gl=1*21t4wm*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc4OTYuMC4wLjA.",
         posttext: "Say goodbye to outdated workflows and hello to our new Deel API Integrations! It’s a faster and more flexible way to connect Deel to your existing tech stack. Connect these 10 tools in just a few clicks and start automating. Sign in to your Deel account and visit the Apps and Integrations store to learn more. ⚙️",
