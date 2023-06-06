@@ -1,31 +1,70 @@
-export default class Notifications extends HTMLElement {
+import { datas } from "../../mocks/getData";
+import { Data } from "../../types/data";
+import data from "../../services/data";
+import Notification, { Attributes } from "../../Components/notification/notification";
+import { getData, getDataR } from "../../store/actions";
+import { addObserver, appState, dispatch } from "../../store/index";
 
+export default class Notifications extends HTMLElement {
+    datass: Notification[] = [];
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
     }
 
-    connectedCallback() {
-        this.render()
+    async connectedCallback() {
+        const datass = await data.get();
+        datass?.forEach((e: Data) => {
+            const prof = this.ownerDocument.createElement(
+                "notification-card"
+            ) as Notification;
+            prof.setAttribute(Attributes.username, e.username);
+            prof.setAttribute(Attributes.userpfp, e.userpfp);
+
+            this.datass.push(prof);
+        });
+
+        if (appState.data.length === 0) {
+            const action = await getData();
+
+        } else {
+            this.render();
+        }
+
+        if (appState.datar.length === 0) {
+            const action = await getDataR();
+
+        } else {
+            this.render();
+        }
     }
 
     render() {
-        if (this.shadowRoot) this.shadowRoot.innerHTML = '<img src="./imagenes/in.png"> <img src="./imagenes/coomeva.png">';
+        if (this.shadowRoot) this.shadowRoot.innerHTML = `
+        <link rel="stylesheet" href="../src/screens/notifications/notifications.css">`;
 
         const sidebar = this.ownerDocument.createElement('sidebar-icon')
         this.shadowRoot?.appendChild(sidebar);
 
-        const search = this.ownerDocument.createElement('input')
-        this.innerHTML = "Search...";
-        this.shadowRoot?.appendChild(search);
+        const mainDashboard = this.ownerDocument.createElement("section")
+        mainDashboard.setAttribute("id", "app-dashboard")
 
-        const name = this.ownerDocument.createElement('h3');
-        this.textContent = "User name";
-        this.shadowRoot?.appendChild(name);
+        const nav = this.ownerDocument.createElement('app-nav');
+        mainDashboard.appendChild(nav);
 
-        const userinfo = this.ownerDocument.createElement('p');
-        this.textContent = "";
-        this.shadowRoot?.appendChild(userinfo);
+        const card = this.ownerDocument.createElement("section")
+        card.className = "card";
+
+        const tittle = this.ownerDocument.createElement('h2');
+        tittle.textContent = 'Notificaciones';
+        card.appendChild(tittle)
+
+        for (let index = 0; index < this.datass.length; index++) {
+            card.appendChild(this.datass[index]);
+        }
+        mainDashboard.appendChild(card);
+
+        this.shadowRoot?.appendChild(mainDashboard);
     }
 }
 customElements.define('app-notifications', Notifications);

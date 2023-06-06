@@ -1,0 +1,22 @@
+.userPost{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+    margin-bottom: 5%;
+}
+
+.pf{
+    width: 15%;
+    border-radius: 100%;
+}
+
+.post{
+    padding: 5%;
+    background-color: white;
+    border-radius: 30px;
+    border-width: 0;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: lightgrey;
+}

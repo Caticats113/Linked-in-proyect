@@ -1,0 +1,32 @@
+:host{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2%;
+    row-gap: 20px;
+}
+
+#maindashboard{
+    margin-left: 7%;
+    display: flex;
+    flex-direction: column;
+    /* width: 75%; */
+}
+
+#recomendaciones{
+    padding: 5%;
+    background-color: white;
+    border-radius: 30px;
+    margin: 5%;
+}
+
+@media (max-width: 900px){
+    :host{
+        margin-left: 0;
+        width: 100%;
+    }
+}
