@@ -36,3 +36,11 @@ log-card{
     margin-top: 5%;
     width: 30%;}
 
+
+@media (max-width: 900px){
+    log-card{
+            align-self: flex-end;
+            margin-top: 20%;
+            width: 90%;
+        }
+    }

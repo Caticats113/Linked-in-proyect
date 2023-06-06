@@ -34,7 +34,7 @@ export default class Reset extends HTMLElement {
         this.shadowRoot?.appendChild(resetButton);
 
         const returnButton = this.ownerDocument.createElement('button');
-        returnButton.textContent = "return";
+        returnButton.textContent = "Return";
         returnButton.addEventListener("click", ()=>{
             dispatch(navigate(Screens.LOGIN))
         })
