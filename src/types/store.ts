@@ -12,15 +12,13 @@ export enum Screens {
     NOTIFICATIONS = "NOTIFICATIONS",
     RESET_PASWORD = "RESET_PASWORD",
     RESET = "RESET"
-
-
 }
 
     export type AppState ={
         screen: Screens;
         data: Data[],
         datar: DataR[]
-        user:string;
+        user:{};
     }
 
     export enum UserActions{

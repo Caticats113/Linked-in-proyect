@@ -20,7 +20,7 @@ const emptyState: AppState = {
     screen: Screens.LOGIN,
     data: [],
     datar: [],
-    user: "",
+    user: {},
 };
 
 export let appState = Storage.get<AppState>({
