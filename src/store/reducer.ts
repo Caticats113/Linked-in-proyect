@@ -1,6 +1,6 @@
 import { appState } from ".";
 import { Actions,AppState,CardActions,RecomsActions,NavigationActions, UserActions } from "../types/store";
-import firebase from "../utils/firebase";
+import Firebase from "../utils/firebase";
 import { Screens } from "../types/store";
 
 export const reducer = (currentAction: Actions, currentState: AppState): AppState => {
@@ -14,7 +14,6 @@ switch(action){
             data:[
                 payload,
                 ...currentState.data,
-
             ]
         }
     case RecomsActions.GET:
@@ -45,7 +44,7 @@ switch(action){
             }
 
             case UserActions.SET_USER:
-                appState.user=payload;
+                appState.user = payload;
                 return appState
 
             defeault:

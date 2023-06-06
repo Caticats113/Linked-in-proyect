@@ -53,7 +53,7 @@ export interface NavigateAction {
 
     export interface AddCardAction{
         action: CardActions.ADD,
-        payload:Data,
+        payload: Data,
     }
 
     export interface GetCardAction{

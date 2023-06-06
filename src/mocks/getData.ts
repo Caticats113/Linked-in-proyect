@@ -3,7 +3,7 @@ import { DataR } from "../types/dataR";
 import { BarData } from "../types/barData";
 import { Screens } from "../types/store";
 
-export const datas: Data[] = [
+export const datas: Omit<Data, "id">[] = [
     {
         userbanner:"https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/banner%20icesi.jpg?alt=media&token=7199c90e-4f11-421f-84fc-29ed288b883b&_gl=1*h4coaa*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMjAwMTguMC4wLjA.",
         username: "Universidad Icesi",

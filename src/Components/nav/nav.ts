@@ -16,7 +16,7 @@ export default class Nav extends HTMLElement{
 
             <section class="buscador">
             <img id="in" src="./imagenes/in.png">
-            <input id="navv" placeholder="search...">
+            <input id="navv" placeholder="Search">
             </section>`;
 
     }

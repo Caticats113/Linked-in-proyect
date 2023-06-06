@@ -7,7 +7,6 @@ export const setUserCredentials=(user:string)=>{
     return{
         action:UserActions.SET_USER,
         payload:user,
-
     }
 }
 
@@ -35,7 +34,8 @@ export const getData = async (): Promise<GetCardAction> => {
     }
 }
 
-export const addNewData = ({payload}: Pick<AddCardAction, "payload">): AddCardAction => {
+export const addNewData = async ({payload}: Pick<AddCardAction, "payload">): Promise<AddCardAction> => {
+    // const newDatai = await data.add(payload)
     return {
         action: CardActions.ADD,
         payload

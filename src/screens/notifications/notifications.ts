@@ -13,8 +13,8 @@ export default class Notifications extends HTMLElement {
     }
 
     async connectedCallback() {
-        const datass = await data.get();
-        datass?.forEach((e: Data) => {
+        const datass = appState.data;
+        datass?.forEach((e: Omit<Data, "id">) => {
             const prof = this.ownerDocument.createElement(
                 "notification-card"
             ) as Notification;

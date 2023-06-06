@@ -3,6 +3,8 @@ import "./screens/export"
 import { addObserver, appState, dispatch } from "./store";
 import { Screens } from "./types/store";
 import { getData } from "./store/actions";
+import Firebase from "./utils/firebase";
+// import data from "./services/data";
 
 class AppContainer extends HTMLElement {
     constructor() {
@@ -16,6 +18,8 @@ class AppContainer extends HTMLElement {
             const action = await getData();
             dispatch(action);
             this.render()
+            // const datasas = await data.get()
+            // datasas.map((i)=>Firebase.addPost(i))
         } else {
             this.render()
         }

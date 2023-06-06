@@ -8,6 +8,7 @@ import FollowRecomI, { Attributte } from "../../Components/followRecomI/followRe
 import { getData } from "../../store/actions";
 import { getDataR } from "../../store/actions";
 import { addObserver, appState, dispatch } from "../../store/index";
+import Firebase from "../../utils/firebase";
 
 export default class Dashboard extends HTMLElement {
     datass: Card[] = [];
@@ -18,7 +19,7 @@ export default class Dashboard extends HTMLElement {
 
     async connectedCallback() {
       const datass = await data.get();
-      datass?.forEach((e: Data) => {
+      datass?.forEach((e: Omit<Data, "id">) => {
         const prof = this.ownerDocument.createElement(
             "app-card"
         ) as Card;
@@ -84,6 +85,29 @@ export default class Dashboard extends HTMLElement {
         //recoms
         const followRecoms = this.ownerDocument.createElement('follow-recoms');
         this.shadowRoot?.appendChild(followRecoms);
+
+
+        Firebase.getPostsListener((products) => {
+          // productsList.innerHTML = "";
+          const oldOnesIds: String[] = [];
+          card.childNodes.forEach((i) => {
+            if (i instanceof HTMLElement) oldOnesIds.push(i.dataset.pid || "");
+          });
+          const newOnes = products.filter((prod) => !oldOnesIds.includes(prod.id));
+
+          newOnes.forEach((e: any) => {
+            const prof = this.ownerDocument.createElement(
+              "app-card"
+          ) as Card;
+          prof.setAttribute(Attributes.username, e.username);
+          prof.setAttribute(Attributes.userpfp, e.userpfp);
+          prof.setAttribute(Attributes.posttext, e.posttext);
+          prof.setAttribute(Attributes.postimage, e.postimage);
+
+            card.prepend(prof);
+
+          });
+        });
 
     }
 }

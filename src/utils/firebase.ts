@@ -6,6 +6,7 @@ import { Screens } from "../types/store";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, setPersistence, browserSessionPersistence } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 import { getFirestore, collection, doc, onSnapshot, addDoc, getDocs, query, orderBy } from "firebase/firestore";
+import { Data } from "../types/data";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -51,10 +52,45 @@ const loginUser = async ({
         });
 };
 
+const addPost = async (post:any) => {
+    try {
+        const where = collection(db, "data");
+        await addDoc(where, { ...post, createdAt: new Date() }); // add createdAt field
+        console.log("se añadió con éxito");
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+const getPosts = async () => {
+    const q = query(collection(db, "data"), orderBy("createdAt")); // order by createdAt
+    const querySnapshot = await getDocs(q);
+    const transformed: Data[] = []
+
+    querySnapshot.forEach((doc) => {
+        const data: Omit<Data, "id"> = doc.data() as any;
+        transformed.push({ id: doc.id, ...data });
+    });
+    return transformed
+};
+
+const getPostsListener = (cb: (docs: Data[]) => void) => {
+    const q = query(collection(db, "data"), orderBy("createdAt")); // order by createdAt
+    onSnapshot(q, (collection) => {
+        const docs: Data[] = collection.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+        })) as Data[];
+        cb(docs);
+    });
+};
 
 export { auth }
 export { db }
 export default {
     registerUser,
     loginUser,
+    addPost,
+    getPosts,
+    getPostsListener
 }
