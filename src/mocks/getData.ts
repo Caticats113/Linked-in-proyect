@@ -51,7 +51,7 @@ export const datas: Omit<Data, "id">[] = [
     }
 ];
 
-export const dataR: DataR[] = [
+export const dataR: Omit<DataR, "id">[] = [
     {
         userpfp: "https://firebasestorage.googleapis.com/v0/b/linkedinauth-c0893.appspot.com/o/dian.png?alt=media&token=1ba32c02-8370-4a6f-89bb-4ae7bee50850&_gl=1*21t4wm*_ga*NDk4ODU0MTU3LjE2ODI0Mjc4NTQ.*_ga_CW55HF8NVT*MTY4NjAxNzUxOC4xMi4xLjE2ODYwMTc4OTYuMC4wLjA.",
         username: "DIAN"

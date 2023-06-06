@@ -24,7 +24,7 @@ export default class FollowRecoms extends HTMLElement {
             <link rel="stylesheet" href="./index.css">
     `};
 
-        dataR?.forEach((a: DataR) => {
+        dataR?.forEach((a: Omit<DataR, "id">) => {
             const pruf = this.ownerDocument.createElement("follow-recomi")
             pruf.setAttribute(Attributte.username, a.username);
             pruf.setAttribute(Attributte.userpfp, a.userpfp);
